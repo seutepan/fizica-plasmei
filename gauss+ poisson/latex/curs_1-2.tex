@@ -1,0 +1,275 @@
+\documentclass[12pt]{article}   %12 point font for Times New Roman
+
+
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{float}
+\usepackage{mathrsfs}
+\usepackage{revsymb}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage{amssymb}
+\usepackage{nicefrac}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{mathrsfs}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{graphicx}  %for images and plots
+\usepackage[a4paper, left=2.5cm, right=2.5cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{setspace}  %use this package to set linespacing as desired
+\usepackage{times}  %set Times New Roman as the font
+\usepackage[explicit]{titlesec}  %title control and formatting
+
+\usepackage[titles]{tocloft}  %table of contents control and formatting
+\usepackage[backend=bibtex, sorting=none, bibstyle=ieee]{biblatex}  %reference manager
+\usepackage[bookmarks=true, hidelinks]{hyperref}
+\usepackage[page]{appendix}  %for appendices
+\usepackage{rotating}  %for rotated, landscape images
+\usepackage[normalem]{ulem}  %for italicized text
+\usepackage{tabto}
+
+%\newcommand{\sectionbreak}{\clearpage}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath}
+\usepackage{verbatim}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{pdfcomment}
+\usepackage{multirow}
+\usepackage{gensymb}
+\usepackage{array}
+
+\usepackage[export]{adjustbox}
+
+\usepackage[toc]{glossaries}
+
+\makeglossaries
+
+\usepackage{afterpage}
+
+%\newcommand\blankpage{%
+%	\null
+%	\thispagestyle{empty}%
+%	\addtocounter{page}{-1}%
+%	\newpage}
+
+
+%TABLE STUFF
+
+%END TABLE STUFF
+
+\DeclareUnicodeCharacter{2212}{-}
+
+\DeclareUnicodeCharacter{223C}{~}
+
+\makeatletter
+\newcommand\footnoteref[1]{\protected@xdef\@thefnmark{\ref{#1}}\@footnotemark}
+\makeatother
+
+\makeatletter
+\newcounter{subsubparagraph}[subparagraph]
+\renewcommand\thesubsubparagraph{%
+	\thesubparagraph.\@arabic\c@subsubparagraph}
+\newcommand\subsubparagraph{%
+	\@startsection{subsubparagraph}    % counter
+	{6}                              % level
+	{\parindent}                     % indent
+	{3.25ex \@plus 1ex \@minus .2ex} % beforeskip
+	{-1em}                           % afterskip
+	{\normalfont\normalsize\bfseries}}
+\newcommand\l@subsubparagraph{\@dottedtocline{6}{10em}{5em}}
+\newcommand{\subsubparagraphmark}[1]{.}
+\makeatother
+
+\usepackage[english]{babel}
+
+\newtheorem{theorem}{Addendum}
+%\newlength{\overwritelength}
+%\newlength{\minimumoverwritelength}
+%\setlength{\minimumoverwritelength}{1cm}
+%\newcommand{\overwrite}[3][red]{%
+%	\settowidth{\overwritelength}{$#2$}%
+%	\ifdim\overwritelength<\minimumoverwritelength%
+%	\setlength{\overwritelength}{\minimumoverwritelength}\fi%
+%	\stackrel
+%	{%
+%		\begin{minipage}{\overwritelength}%
+%			\color{#1}\centering\small #3\\%
+%			\rule{1pt}{9pt}%
+%	\end{minipage}}
+%	{\colorbox{#1!50}{\color{black}$\displaystyle#2$}}}
+
+\newlength{\overwritelength}
+\newlength{\minimumoverwritelength}
+\setlength{\minimumoverwritelength}{1cm}
+\newcommand{\overwrite}[3][red]{%
+	\settowidth{\overwritelength}{$#2$}%
+	\ifdim\overwritelength<\minimumoverwritelength%
+	\setlength{\overwritelength}{\minimumoverwritelength}\fi%
+	\stackrel
+	{%
+		\begin{minipage}{\overwritelength}%
+			\color{#1}\centering\small #3\\%
+			\rule{1pt}{9pt}%
+	\end{minipage}}
+	{\colorbox{#1!50}{\color{black}$\displaystyle#2$}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bibliography
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Add your bibliography file here
+\bibliography{refc1}
+
+
+% prevent certain fields in references from printing in bibliography
+\AtEveryBibitem{\clearfield{issn}}
+\AtEveryBibitem{\clearlist{issn}}
+
+\AtEveryBibitem{\clearfield{language}}
+\AtEveryBibitem{\clearlist{language}}
+
+\AtEveryBibitem{\clearfield{doi}}
+\AtEveryBibitem{\clearlist{doi}}
+
+\AtEveryBibitem{\clearfield{url}}
+\AtEveryBibitem{\clearlist{url}}
+
+\AtEveryBibitem{%
+	\ifentrytype{online}
+	{}
+	{\clearfield{urlyear}\clearfield{urlmonth}\clearfield{urlday}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%paragraph indent
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\parindent}{4em}
+\setlength{\parskip}{1em}
+
+%%%
+%The subsubsub...subsection format
+%%%
+
+
+\title{Distribuții statistice: Poisson și Gauss}
+\author{Ștefan-Răzvan~Anton\\ Anul 3, Grupa 1334,\\ Facultatea de Științe Aplicate}
+
+\begin{document}
+
+\maketitle
+
+
+
+{\section{Scopul lucrării}
+%
+1.  Realizarea experimentală a unei analize statistice.\\
+2.  Determinarea unor mărimi caracteristice unei distribuții statistice.\\
+3.  Asemănări și deosebiri între distribuțiile Poisson și Gauss.
+}
+%
+{\section{Modul de lucru}
+În această lucrare, dorim să caracterizăm distribuția statistică a pulsurilor electrice obținute pe un detector cu scintilație expus radiațiilor emise de o probă ce conține ${}^{241} Am$, atunci când proba se afla la distanțe diferite fața de detector.
+Astfel, vom face două masuratori.
+\subsection{Masuratoarea 1}
+{
+Pentru aceata masuratoare este necesar să inregistrăm $1024$ de măsuratori pentru un timp de numărare de $1s$.
+Proba de ${}^{241} Am$ se va poziționa la o distanță apoximativă de $2cm$ față de detector, iar numărul mediu de impulsuri pentru un timp de numărare de $1s$ sa fie $3-5$.
+}
+\subsection{Masuratoarea 2}
+{
+Pentru aceata masuratoare este necesar să inregistrăm $2048$ de măsuratori pentru un timp de numărare de $1s$.
+Proba de ${}^{241} Am$ se va poziționa la o distanță apoximativă de $1.5cm$ față de detector, iar numărul mediu de impulsuri pentru un timp de numărare de $1s$ sa fie $12-18$.
+}
+Dupa realizarea celor două masuratori se vor reprezenta histogramele masuratoriilor si se vor fita catat cu o distributie normala scalata cat si cu o distributie Poisson scalata. Curbele rezultate se vor reprezenta pe acelasi grafic cu histograma pe care au fost fitate. \\
+In continuare, plecand de la datele masuratoriilor se vor calcula si interpreta marimiile: valoare medie, dispersie, abatere standard, asimetria, si aplatizarea
+}
+
+
+
+{\section{Rezultate}
+In urma celor doua masuratori au rezultat datele reprezentate grafic in Fig \ref{fig1} si Fig \ref{fig2}
+\begin{figure}[H]
+\centering
+  \includegraphics[width=0.9\textwidth]{poiss_mas}
+  \caption{\label{fig1}Rezultatul masuratorii 1 (Evenimente pe secunda).}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+  \includegraphics[width=0.9\textwidth]{gauss_mas}
+  \caption{\label{fig2}Rezultatul masuratorii 2 (Evenimente pe secunda).}
+\end{figure}
+
+
+
+Prin fitare cu o distributie normala scalata obtinem 
+
+\begin{eqnarray}\nonumber
+f_1 &=& 1036 N(3.16,1.87^2)\,,\\ \nonumber
+f_2 &=& 2045 N(13.5,3.73^2)\,,
+\end{eqnarray}
+unde $N(a,b)$ este distrubutia normala cu valaorea medie $a$ si deviatia standard $b$.\\
+
+
+Prin fitare cu o distributie Poisson obtinem 
+
+\begin{eqnarray}\nonumber
+f_1 &=& 1023 P(3.43)\,,\\ \nonumber
+f_2 &=& 2039 P(13.8)\,,
+\end{eqnarray}
+unde $P(a)$ este distrubutia Poisson cu valaorea medie $a$.
+
+
+Curbele obtinute in urma fitariilor impreuna cu histogramele pe care au fost fitate au fost reprezentate grafic in Fig \ref{fig3} si Fig \ref{fig4}
+
+
+\begin{figure}[H]
+\centering
+  \includegraphics[width=0.9\textwidth]{poiss_hist}
+  \caption{\label{fig3}Histograma + Norm + Poiss Masuratoarea 1.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+  \includegraphics[width=0.9\textwidth]{gauss_hist}
+  \caption{\label{fig4}Histograma + Norm + Poiss Masuratoarea 2.}
+\end{figure}
+
+
+
+
+
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|} 
+ \hline
+ Masuratoare & val. medie & dispersie & deviatie standard & asimetria & aplatizarea& interval \\ 
+ \hline\hline
+ 1 & 13.84 & 14.01 & 3.74 & 0.29 & -0.02 & 4-28 \\
+ \hline
+ 2 & 3.41 & 3.44 & 1.85 & 0.54 & 0.34 & 0-11 \\
+
+ \hline
+\end{tabular}
+\caption{\label{tab1}Unele marimi caracteristice pentru distributia statsitica a masuratoriilor.}
+\end{center}
+\end{table}
+}
+
+
+
+
+
+
+
+{\section{Concluzii}
+
+}
+\end{document}

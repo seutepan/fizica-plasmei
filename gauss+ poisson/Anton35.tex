@@ -1,0 +1,178 @@
+\documentclass[review]{elsarticle}
+\usepackage{graphicx}
+\usepackage{lineno,hyperref}
+\modulolinenumbers[5]
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{float}
+\usepackage{mathrsfs}
+\usepackage{revsymb}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage{amssymb}
+\usepackage{nicefrac}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{mathrsfs}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{amsthm}
+%\usepackage{cite}
+\usepackage{subcaption}
+\theoremstyle{plain}% Theorem-like structures provided by amsthm.sty
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newtheorem{notation}{Notation}
+
+\makeatletter
+\def\ps@pprintTitle{%
+  \let\@oddhead\@empty
+  \let\@evenhead\@empty
+  \let\@oddfoot\@empty
+  \let\@evenfoot\@oddfoot
+}
+\makeatother
+
+%\journal{Mathematics and Computers in Simulation}
+
+
+\bibliographystyle{elsarticle-num}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{frontmatter}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\title{Atomul de hidrogen. Vizualizarea orbitalilor. Simulari numerice}
+
+\author{Stefan - Razvan Anton}
+
+\address{Facultatea de Stiinte Aplicate.}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+Atomul de hidrogen este studiat utilizand ca procedura de discretizare a spatiului metoda diferentelor finite. Intr-o astfel de procedura ecuatia lui Schr\"{o}dinger atemporala pentru atomul de hidrogen este redusa la rezolvarea unei probleme de vectori si valori proprii. Valoriile numerice obtinute sunt nivelul energetic al orbitalilor si vectorii ce alcatuiesc functiile de unda ale acestora. Rezultatele sunt comparabile cu realitatea, eroarea cea mai mare ($8.85\%$) fiind la determinarea nivelului energetic al orbitalului $1s$.
+
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{keyword}
+Ecuatia lui Schr\"{o}dinger atemporala; metoda diferentelor finite; metode numerice in calculul ecuatiilor cu derivate partiale;
+\end{keyword}
+
+\end{frontmatter}
+
+%\linenumbers
+
+{\section{Introducere}
+}
+
+
+
+
+
+
+{\section{Rezultate}\label{rez}
+
+In urma rezolvarii problemei de vectori si valori proprii obtinem doua rezultate principale. Energiile pentru fiecare orbital in ordine crescatoare (cu mentiunea ca energia obtinuta in urma rezolvarii problemei de vectori si valori proprii este in unitati atomice) si vectorii ce alcatuiesc functiile de unda.
+
+{\subsection{Energiile orbitalilor}\label{energii}
+
+Valoriie energiei primilor 18 orbitali atomici au fost calculate pentru multiple valori ale numarului de noduri pe fiecare axa N.
+Observam faptul ca, per total, eroarea dintre energiile calculate numeric si cele analitice scade o data cu cresterea lui N. 
+
+Observam de asemenea ca pentru orbitali 1s, 2s, 3s eroarea este semnificativ mai mare decat eroarea pentru ceilalti orbitali. Acest lucru este generat de faptul ca influenta singularitatii din punctul de coordonate (0,0,0) are un efect mai mare asupra valorii numerice a energiei acestor orbitali. Pentru scaderea erori de calcul a valorii energiei calculata numeric pentru acesti orbitali putem incerca marirea numerului de noduri in care discretizam spatiul. Acest procedeu va fi discutat in sectiunea \ref{discutie}.
+
+Un alt lucru remarcabil este ca nu pentru toate valorile energiilor orbitalilor o crestere in discretizarea spatiului duce la o scadere in eroarea de calcul. De exemplu, pentru orbitalii $2px$, $2py$, $2pz$ eroarea scade la trecerea de la $N=150$ la $N=140$. Acelasi lucru este observat pentru orbitalii $3px$, $3py$, $3pz$ la trecerea de la $N=150$ la $N=140$ si de la $N=140$ la $N=130$. Ajungem astfel la concluzia ca fiecare orbital are un $N$ ideal, pentru care eroarea relativa este minima, dar acest lucru nu inseamna ca acelasi N este ideal pentru alt orbital. Presupunem ca cele mai precise valori ale energiiler s-ar putea obtine pentru o discretizare variabila o data cu distanta fata de nucleu (discretizare mai fina apropae de nucleu si mai rara la distante mari fatad e nucleu).
+
+In continuare avem sase tabele corespondente cu energiile primilor 18 orbitali calculate pe un spatiu in forma de cub cu latura de 50\r{A}, in care fiecare axa a fost discretizata in 150, 140, 130, 120, 110 si 100 de noduri.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|c|c|c|} 
+ \hline
+ Orbital  & $E_{analitic}(eV)$    & $E_{numeric}(eV)$  &Eroare (\%)\\
+ \hline\hline
+ 1s & -13.605 & -12.40031 & -8.85 \\ 
+ \hline
+ 2s & -3.40125 &-3.262804&  -4.07 \\
+ \hline
+ 2px & -3.40125 & -3.39791 & -0.09\\
+ \hline
+ 2py & -3.40125 & -3.39791 &  -0.09 \\
+ \hline
+ 2pz & -3.40125 & -3.39791 & -0.09 \\
+ \hline
+ 3s & -1.51166 &  -1.46621 &  -3.01 \\ 
+ \hline
+ 3px & -1.51166& -1.50893 &   -0.18 \\ 
+ \hline
+ 3py & -1.51166 & -1.50893 &  -0.18  \\ 
+ \hline
+ 3pz & -1.51166 & -1.50893 &  -0.18\\ 
+ \hline
+ 3dz2 & -1.51166 & -1.49864 &  -0.86 \\ 
+ \hline
+ 3dxz & -1.51166 & -1.49864 &   -0.86 \\ 
+ \hline
+ 3dyz & -1.51166 & -1.49651 & -1.00\\ 
+ \hline
+ 3d(x2-y2) & -1.51166 & -1.49651 & -1.00  \\ 
+ \hline
+ 3dxy & -1.51166 & -1.49651&   -1.00 \\ 
+ \hline
+ 4s & -0.85031 & -0.83297 &  -2.03  \\ 
+ \hline
+ 4px & -0.85031 & -0.83737 &  -1.52\\ 
+ \hline
+ 4py & -0.85031 & -0.83737 & -1.52 \\ 
+ \hline
+ 4pz & -0.85031 & -0.83737 & -1.52  \\ 
+ \hline
+\end{tabular}
+\caption{\label{tab1}Energiile primilor 18 orbitali pentru N=150 cand dimensiunea spatiului considerat este [50:50:50]\r{A}.}
+\end{center}
+\end{table}
+
+
+
+
+{\section{Discutie}\label{discutie}
+\cite{lambert2001numerical}
+%\begin{figure}[H]
+%centering
+%\includegraphics[width=\linewidth]{timp}
+%\caption{Graficul timpului necesar rularii programului functie de numarul de noduri pe fiecare axa N.}\label{erori}
+%\end{figure}
+
+Folsind functia ce aproximeaza modul in care creste timpul de executie, calculam faptul ca pentru $N=380$ avem nevoi de de aproximativ $85400$ de secunde, adica aproximativ $24$ de ore, 
+
+Lucru care teoretic este posibil, dar practic tebuie facute doua mentiuni importante:
+
+1) Modul in care timpul de exectutie creste o data cu numerul de noduri pe fiecare axa depinde de sistemul de calcul pe care se ruleaza progrmaul.\\
+2) Programul este imposibil de rulat pentru $N=380$. Daca consideram matricea A cu elemente de tip float si dimensiunea $380^3$ x $380^3$ obtinem o cantitate de RAM necesara pentru rularea algoritmului numeric de aproximativ 12 Pb (de 250000 de ori mai mult decat cantitatea de ram necesara pentru a rula algoritmul numeric in cazul $N=150$).
+
+
+}
+
+
+{\section{Concluzii}
+
+}
+\bibliography{mybibfile}
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
