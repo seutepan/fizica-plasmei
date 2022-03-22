@@ -175,21 +175,23 @@
 %
 {\section{Modul de lucru}
 În această lucrare, dorim să caracterizăm distribuția statistică a pulsurilor electrice obținute pe un detector cu scintilație expus radiațiilor emise de o probă ce conține ${}^{241} Am$, atunci când proba se afla la distanțe diferite fața de detector.
-Astfel, vom face două masuratori.
-\subsection{Masuratoarea 1}
+Astfel, vom face două experiente.
+\subsection{Experiența 1}
 {
-Pentru aceata masuratoare este necesar să inregistrăm $1024$ de măsuratori pentru un timp de numărare de $1s$.
+Pentru aceata experiență este necesar să inregistrăm $1024$ de masuratori pentru un timp de numărare de $1s$.
 Proba de ${}^{241} Am$ se va poziționa la o distanță apoximativă de $2cm$ față de detector, iar numărul mediu de impulsuri pentru un timp de numărare de $1s$ sa fie $3-5$.
 }
-\subsection{Masuratoarea 2}
+\subsection{Experiența 2}
 {
-Pentru aceata masuratoare este necesar să inregistrăm $2048$ de măsuratori pentru un timp de numărare de $1s$.
+Pentru aceata experiență este necesar să inregistrăm $2048$ de măsuratori pentru un timp de numărare de $1s$.
 Proba de ${}^{241} Am$ se va poziționa la o distanță apoximativă de $1.5cm$ față de detector, iar numărul mediu de impulsuri pentru un timp de numărare de $1s$ sa fie $12-18$.
 }
-Dupa realizarea celor două masuratori se vor reprezenta histogramele masuratoriilor si se vor fita catat cu o distributie normala scalata cat si cu o distributie Poisson scalata. Curbele rezultate se vor reprezenta pe acelasi grafic cu histograma pe care au fost fitate. \\
-In continuare, plecand de la datele masuratoriilor se vor calcula si interpreta marimiile: valoare medie, dispersie, abatere standard, asimetria, si aplatizarea
+\subsection{Prelucrarea datelor}
+{
+Dupa realizarea celor două experiențe se vor reprezenta histogramele masurătoriilor si se vor fita fiecare cu o distributie normala scalata cat si cu o distributie Poisson scalata. Curbele rezultate in urma firatii datelor se vor reprezenta pe acelasi grafic cu histograma pe care au fost fitate. \\
+In continuare, plecand de la datele masuratoriilor se vor calcula si interpreta marimiile: valoare medie, dispersie, abatere standard, asimetria si aplatizarea
 }
-
+}
 
 
 {\section{Rezultate}
@@ -197,28 +199,26 @@ In urma celor doua masuratori au rezultat datele reprezentate grafic in Fig \ref
 \begin{figure}[H]
 \centering
   \includegraphics[width=0.9\textwidth]{poiss_mas}
-  \caption{\label{fig1}Rezultatul masuratorii 1 (Evenimente pe secunda).}
+  \caption{\label{fig1}Rezultatul experienței 1 (evenimente pe secunda).}
 \end{figure}
 
 \begin{figure}[H]
 \centering
   \includegraphics[width=0.9\textwidth]{gauss_mas}
-  \caption{\label{fig2}Rezultatul masuratorii 2 (Evenimente pe secunda).}
+  \caption{\label{fig2}Rezultatul experienței 2 (Evenimente pe secunda).}
 \end{figure}
-
-
-
-Prin fitare cu o distributie normala scalata obtinem 
-
+%
+Prin fitare cu o distributie normala scalata obtinem (unde coeficientii $1$ si $2$ marcheaza functia de fitare pentru experiența 1 respectiv 2)
+%
 \begin{eqnarray}\nonumber
 f_1 &=& 1036 N(3.16,1.87^2)\,,\\ \nonumber
 f_2 &=& 2045 N(13.5,3.73^2)\,,
 \end{eqnarray}
-unde $N(a,b)$ este distrubutia normala cu valaorea medie $a$ si deviatia standard $b$.\\
-
-
+%
+unde $N(a,b)$ este distrubutia normala cu valoarea medie $a$ si deviatia standard $b$.\\
+%
 Prin fitare cu o distributie Poisson obtinem 
-
+%
 \begin{eqnarray}\nonumber
 f_1 &=& 1023 P(3.43)\,,\\ \nonumber
 f_2 &=& 2039 P(13.8)\,,
@@ -250,17 +250,22 @@ Curbele obtinute in urma fitariilor impreuna cu histogramele pe care au fost fit
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|c|c|} 
  \hline
- Masuratoare & val. medie & dispersie & deviatie standard & asimetria & aplatizarea& interval \\ 
+ Experienta & val. medie & dispersie & deviatie standard & asimetria & aplatizarea& interval \\ 
  \hline\hline
- 1 & 13.84 & 14.01 & 3.74 & 0.29 & -0.02 & 4-28 \\
+ 2 & 13.84 & 14.01 & 3.74 & 0.29 & -0.02 & 4-28 \\
  \hline
- 2 & 3.41 & 3.44 & 1.85 & 0.54 & 0.34 & 0-11 \\
+ 1 & 3.41 & 3.44 & 1.85 & 0.54 & 0.34 & 0-11 \\
 
  \hline
 \end{tabular}
 \caption{\label{tab1}Unele marimi caracteristice pentru distributia statsitica a masuratoriilor.}
 \end{center}
 \end{table}
+Pentru a ințelege mai bine asemanariile si deosebiriile intre cele doua distributii  trebuie sa comparam marimiile caracteristice calculate anterior\\
+1) Valoare medie reprezinta tendința centrala a datelor masurate. In cazul nostru, pentru experienta 1  aveem o valoare medie de 3.41, iar pentru experiența 2 o valoare medie dde 13.84.
+ Putem comparara aceste valori cu cele recomandate in instructiuni, pentru experienta 1 se recomanda obtinerea de valori in intervalul 3-5, iar pentru experienta 2 se recomanda obtinerea de valori in intervalul 12-18. Prin analiza valoriilor medii putem confirma faptul ca experientele s-au desfasurat in parametrii recomandati\\
+2)
+
 }
 
 
