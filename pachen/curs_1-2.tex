@@ -1,0 +1,325 @@
+\documentclass[12pt]{article}   %12 point font for Times New Roman
+
+
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{mathrsfs}
+\usepackage{revsymb}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage{amssymb}
+\usepackage{nicefrac}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{mathrsfs}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{graphicx}  %for images and plots
+\usepackage[a4paper, left=2.5cm, right=2.5cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{setspace}  %use this package to set linespacing as desired
+\usepackage{times}  %set Times New Roman as the font
+\usepackage[explicit]{titlesec}  %title control and formatting
+
+\usepackage[titles]{tocloft}  %table of contents control and formatting
+\usepackage[backend=bibtex, sorting=none, bibstyle=ieee]{biblatex}  %reference manager
+\usepackage[bookmarks=true, hidelinks]{hyperref}
+\usepackage[page]{appendix}  %for appendices
+\usepackage{rotating}  %for rotated, landscape images
+\usepackage[normalem]{ulem}  %for italicized text
+\usepackage{tabto}
+
+%\newcommand{\sectionbreak}{\clearpage}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath}
+\usepackage{verbatim}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{pdfcomment}
+\usepackage{multirow}
+\usepackage{gensymb}
+\usepackage{array}
+
+\usepackage[export]{adjustbox}
+
+\usepackage[toc]{glossaries}
+
+\makeglossaries
+
+\usepackage{afterpage}
+
+%\newcommand\blankpage{%
+%	\null
+%	\thispagestyle{empty}%
+%	\addtocounter{page}{-1}%
+%	\newpage}
+
+
+%TABLE STUFF
+
+%END TABLE STUFF
+
+\DeclareUnicodeCharacter{2212}{-}
+
+\DeclareUnicodeCharacter{223C}{~}
+
+\makeatletter
+\newcommand\footnoteref[1]{\protected@xdef\@thefnmark{\ref{#1}}\@footnotemark}
+\makeatother
+
+\makeatletter
+\newcounter{subsubparagraph}[subparagraph]
+\renewcommand\thesubsubparagraph{%
+	\thesubparagraph.\@arabic\c@subsubparagraph}
+\newcommand\subsubparagraph{%
+	\@startsection{subsubparagraph}    % counter
+	{6}                              % level
+	{\parindent}                     % indent
+	{3.25ex \@plus 1ex \@minus .2ex} % beforeskip
+	{-1em}                           % afterskip
+	{\normalfont\normalsize\bfseries}}
+\newcommand\l@subsubparagraph{\@dottedtocline{6}{10em}{5em}}
+\newcommand{\subsubparagraphmark}[1]{.}
+\makeatother
+
+\usepackage[english]{babel}
+
+\newtheorem{theorem}{Addendum}
+%\newlength{\overwritelength}
+%\newlength{\minimumoverwritelength}
+%\setlength{\minimumoverwritelength}{1cm}
+%\newcommand{\overwrite}[3][red]{%
+%	\settowidth{\overwritelength}{$#2$}%
+%	\ifdim\overwritelength<\minimumoverwritelength%
+%	\setlength{\overwritelength}{\minimumoverwritelength}\fi%
+%	\stackrel
+%	{%
+%		\begin{minipage}{\overwritelength}%
+%			\color{#1}\centering\small #3\\%
+%			\rule{1pt}{9pt}%
+%	\end{minipage}}
+%	{\colorbox{#1!50}{\color{black}$\displaystyle#2$}}}
+
+\newlength{\overwritelength}
+\newlength{\minimumoverwritelength}
+\setlength{\minimumoverwritelength}{1cm}
+\newcommand{\overwrite}[3][red]{%
+	\settowidth{\overwritelength}{$#2$}%
+	\ifdim\overwritelength<\minimumoverwritelength%
+	\setlength{\overwritelength}{\minimumoverwritelength}\fi%
+	\stackrel
+	{%
+		\begin{minipage}{\overwritelength}%
+			\color{#1}\centering\small #3\\%
+			\rule{1pt}{9pt}%
+	\end{minipage}}
+	{\colorbox{#1!50}{\color{black}$\displaystyle#2$}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bibliography
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Add your bibliography file here
+\bibliography{refc1}
+
+
+% prevent certain fields in references from printing in bibliography
+\AtEveryBibitem{\clearfield{issn}}
+\AtEveryBibitem{\clearlist{issn}}
+
+\AtEveryBibitem{\clearfield{language}}
+\AtEveryBibitem{\clearlist{language}}
+
+\AtEveryBibitem{\clearfield{doi}}
+\AtEveryBibitem{\clearlist{doi}}
+
+\AtEveryBibitem{\clearfield{url}}
+\AtEveryBibitem{\clearlist{url}}
+
+\AtEveryBibitem{%
+	\ifentrytype{online}
+	{}
+	{\clearfield{urlyear}\clearfield{urlmonth}\clearfield{urlday}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%paragraph indent
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\parindent}{4em}
+\setlength{\parskip}{1em}
+
+%%%
+%The subsubsub...subsection format
+%%%
+
+
+\title{Studiul descărcării luminescente. Obținerea curbei lui Paschen}
+\author{Ștefan-Răzvan~Anton\\ Anul 3, Grupa 1334,\\ Facultatea de Științe Aplicate}
+
+\begin{document}
+
+\maketitle
+
+
+
+{\section{Scopul lucrării}
+%
+1.  Realizarea experimentală a unei analize statistice.\\
+2.  Determinarea unor mărimi caracteristice unei distribuții statistice.\\
+3.  Asemănări și deosebiri între distribuțiile Poisson și Gauss.
+}
+%
+{\section{Principiul Fizic}
+
+}
+{\section{Montajul Experimental}
+
+}
+{\section{Modul de lucru}
+
+}
+
+
+{\section{Rezultate}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|} 
+ \hline
+ $d[m]$ & $p[mTorr]$ & $p*d[m*mTorr]$ & $U_b[V]$ & $U_d[V]$ \\ 
+ \hline\hline
+0.77 & 25 & 19.18 & 1193 & 590  \\
+ \hline
+ 0.69 & 73 & 50.44 & 854 & 534  \\
+ \hline
+ 0.57 & 125 & 71.25 & 965 & 516  \\
+ \hline
+ 0.48 & 175 & 83.83 & 1007 & 501  \\
+ \hline
+ 0.39 & 227 & 88.76 & 1043 & 502  \\
+ \hline
+\end{tabular}
+\caption{\label{tab1}Rezultatul măsuratoriilor pentru grupa 1 ($20cm$).}
+\end{center}
+\end{table}
+
+
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|} 
+ \hline
+ $d[m]$ & $p[mTorr]$ & $p*d[m*mTorr]$ & $U_b[V]$ & $U_d[V]$ \\ 
+ \hline\hline
+0.73 & 45 & 32.85 & 1259 & 487  \\
+ \hline
+ 0.63 & 99 & 62.37 & 735 & 521  \\
+ \hline
+ 0.51 & 160 & 81.60 & 803 & 505  \\
+ \hline
+ 0.39 & 216 & 84.24 & 969 & 498  \\
+ \hline
+ 0.30 & 285 & 85.50 & 1037 & 530  \\
+ \hline
+\end{tabular}
+\caption{\label{tab1}Rezultatul măsuratoriilor pentru grupa 2 ($35cm$).}
+\end{center}
+\end{table}
+
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|} 
+ \hline
+ $d[m]$ & $p[mTorr]$ & $p*d[m*mTorr]$ & $U_b[V]$ & $U_d[V]$ \\ 
+ \hline\hline
+0.72 & 53 & 38.16 & 1369 & 471  \\
+ \hline
+ 0.57 & 115 & 65.55 & 750 & 512  \\
+ \hline
+ 0.46 & 175 & 85.50 & 966 & 505  \\
+ \hline
+ 0.36 & 232 & 83.52 & 995 & 502  \\
+ \hline
+ 0.29 & 298 & 86.42 & 1064 & 525  \\
+ \hline
+\end{tabular}
+\caption{\label{tab1}Rezultatul măsuratoriilor pentru grupa 3 ($50cm$).}
+\end{center}
+\end{table}
+
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|} 
+ \hline
+ $d[m]$ & $p[mTorr]$ & $p*d[m*mTorr]$ & $U_b[V]$ & $U_d[V]$ \\ 
+ \hline\hline
+0.72 & 52 & 37.44 & 1157 & 517  \\
+ \hline
+ 0.63 & 105 & 66.15 & 696 & 509  \\
+ \hline
+ 0.51 & 161 & 82.11 & 765 & 506  \\
+ \hline
+ 0.40 & 215 & 86.00 & 995 & 485  \\
+ \hline
+ 0.31 & 279 & 86.49 & 1091 & 495  \\
+ \hline
+\end{tabular}
+\caption{\label{tab1}Rezultatul măsuratoriilor pentru grupa 4 ($72.8cm$).}
+\end{center}
+\end{table}
+
+
+\begin{figure}
+\centering
+\begin{subfigure}{.45\textwidth}
+    \centering
+    \includegraphics[width=.95\linewidth]{gr1}  
+    \caption{Grupa 1 ($20cm$)}
+    \label{SUBFIGURE LABEL 1}
+\end{subfigure}
+\begin{subfigure}{.45\textwidth}
+    \centering
+    \includegraphics[width=.95\linewidth]{gr2}  
+    \caption{Grupa 2 ($35cm$)}
+    \label{SUBFIGURE LABEL 2}
+\end{subfigure}
+\begin{subfigure}{.45\textwidth}
+    \centering
+    \includegraphics[width=.95\linewidth]{gr3}  
+    \caption{Grupa 3 ($50cm$)}
+    \label{SUBFIGURE LABEL 3}
+\end{subfigure}
+\begin{subfigure}{.45\textwidth}
+    \centering
+    \includegraphics[width=.95\linewidth]{gr4}  
+    \caption{Grupa 4 ($72.8cm$)}
+    \label{SUBFIGURE LABEL 4}
+\end{subfigure}
+\caption{Dependența experimentală a tensiuniilor $U_b$ si $U_d$ pentru cele partru grupe}
+\label{FIGURE LABEL}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=.85\linewidth]{medie}  
+    \caption{}
+    \label{FIGURE LABEL 1}
+\end{figure}
+}
+
+
+
+
+
+
+
+{\section{Concluzii}
+
+}
+\end{document}
