@@ -59,9 +59,7 @@
 %	\addtocounter{page}{-1}%
 %	\newpage}
 
-
 %TABLE STUFF
-
 %END TABLE STUFF
 
 \DeclareUnicodeCharacter{2212}{-}
@@ -88,6 +86,20 @@
 \makeatother
 
 \usepackage[english]{babel}
+
+
+
+
+\makeatletter
+\providecommand\add@text{}
+\newcommand\tagaddtext[1]{%
+  \gdef\add@text{#1\gdef\add@text{}}}% 
+\renewcommand\tagform@[1]{%
+  \maketag@@@{\llap{\add@text\quad}(\ignorespaces#1\unskip\@@italiccorr)}%
+}
+\makeatother
+
+
 
 \newtheorem{theorem}{Addendum}
 %\newlength{\overwritelength}
@@ -169,23 +181,86 @@
 
 {\section{Scopul lucrării}
 %
-1.  Realizarea experimentală a unei analize statistice.\\
-2.  Determinarea unor mărimi caracteristice unei distribuții statistice.\\
-3.  Asemănări și deosebiri între distribuțiile Poisson și Gauss.
+1.  Înțelegerea modului de funcționare a unui tub de descărcare și a parametrilor care îl caracterizează.\\
+2.  Aplicarea unei proceduri de măsurare pe un sistem controlat de la distanță.\\
+3.  Cooperarea în organizare astfel încat să se atinga obiectivele propuse.\\
+4. Trasarea și interpretarea curbei Paschen obținute.
 }
 %
 {\section{Principiul Fizic}
+Un tub de descărcare electrică consta intr-un tub de sticla sigilat astfel incat sa nu exista schimb de gaz cu exteriorul, presiunea dinăuntrul tubului poate fi intre 1mTorr si 1kTorr\cite{griffiths2005introduction}. In interiorul tubului se afla doi electrozi metalici, intre care se aplica o tensiune continua ce poate fi variata. Aceasta diferentad e potential intre cei electrozi produce aparitia unui camp electric orientat de la anodul pozitiv la catodul negativ. Campul astfel creeat accelereaza electronii liberi catre anon si ionii pozitivi catre catod. Datorita ciocnirii inelatice cu particulele neutre din gaz, daca electronii accelerati ajung la o energie cinetica suficient de mare acestia pot ioniza particulele neutre
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.85\linewidth]{png2pdf}  
+    \caption{Diagrama schematica a unui tub de descarcare electrica in aer la presiune scăzută\cite{hammadi2016employment}.}
+    \label{Montaj}
+\end{figure}
+
+
+in continuare vom analiza distributia radiatiei luminoae emise in functie de pozitia din tub.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.85\linewidth]{desc}  
+    \caption{Distributia radiatiei luminoase in tubul de descarcare.}
+    \label{Montaj}
+\end{figure}
 
 }
+
+
+
+
 {\section{Montajul Experimental}
+Montajul experimental consta intr-un simulator ce permite ajustarea parametriilor tubului de descarcare dupa cum urmeaza:
 
+Prin actionarea butonului din dreapta sus denumit "Lights" se poate porni/opri lumina in incinta.
+
+Prin actionarea glisorului de sus denumit "Electrode Voltage" se poate modifica tensiunea dintre electrozi in intervalul $0-2000[V]$.
+
+Prin actionarea glisorului din stanga jos denumit "Electromagnet" se poate modifica intensitatea campului magnetic creat de cei doi electomagneti in intervalul $0-200$[G].
+
+Prin actionarea glisorului din dreapta jos denumit "Pressure" se poate modifica presiunea din incina in intervalul $20-1000$[mTorr].
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.85\linewidth]{simulator}  
+    \caption{Fereastra de control a simulatorului.}
+    \label{Montaj}
+\end{figure}
 }
+
 {\section{Modul de lucru}
+Se lucreaza la urmatoarele distante intre electrozi: $0.2m$ (grupa 1), $0.35m$ (grupa 2), $.5m$ (grupa 3) si $0.728cm$ (grupa 4).
+
+Pas 1: Se calculeaza valoriile presiunii ce va fi fixată în simulator dupa formula
+\begin{eqnarray}\nonumber
+p=\frac{4+n+10(k*n-1)}{d} 
+\tagaddtext{[mTorr]}
+\end{eqnarray}
+unde n este numarul grupei de lucru ($n=\overline{1,4} $), k este numarul masuratorii ($k=\overline{1,5} $), d este distanta dintre electrozi aferenta grupei de  lucru ($0.2, 0.35, 0.5, 0.728$)[m].
+
+Pas 2: Se alege in simulator presiunea calculata la pasul 1 (se poate alege o valoare de $\pm20\%$ fata de valoare calculata), simulatorul va modifica automat distanta dintre electrozi.
+
+Pas 3: Se mareste tensiunea dintre electozi pana cand se detecteaza plasma (se ajunge la tensiunea de aprindere, $U_b$). Se noteaza, intr-un tabel, distanta dintre electrozi, presiunea in tub si tensiunea dintre electorzi la momentul detectiei.
+
+Pas 4: Se micsoreaza tensiunea dintre electrozi pana cand plasma nu mai este vizibila in tub (se ajunge la tensiunea de stingere, $U_d$). Se noteaza, intr-o alta coloana a tabelului de la pasul 3, tensiunea dintre electrozi la momentul stingerii plasmei.
+
+Se repeta pasii anteriori pentru restul de patru masuratori si restul de trei grupa. Pentru fiecare grupa se va realiza un tabel separat.
+
+Pas 5: Se reprezinta grafic dependenta tensiuniilor $U_b$si $U_d$ in functie de produsul presiunii si distantei dintre electrozi. Pentru fiecare grupa se va realiza un grafic separat.
 
 }
 
 
 {\section{Rezultate}
+
+In urma parcuregerii pasiilor descrisi in sectiunea anterioara au rezultat tabele \ref{tab1}, \ref{tab2}, \ref{tab3}, \ref{tab4} si figuriile \ref{FIGURE LABEL}.
+
+Rezultatele obtinute sunt nesatisfacatoare, in cazul grupelor 1 si 3, $U_b(p*d)$ descrie o curba Paschen, dar in cazul grupelor 2 si 4 valoriile obtinute dupa minim cresc mult prea brusc pentru a descrie o curba Paschen, lucru evident daca ne uitam la curba de interpolare, mai ales in cazul grupei 4. In pentru valoriile $U_d(p*d)$ rezultatele sunt mult mai satisfacatoare acestea aflandu-se mereu in intervalul (500-600)[V]. Curbele de interpolare ale acestora sunt apropae drepta, fapt ce este in concordanta cu cele asteptate.
 
 \begin{table}[H]
 \begin{center}
@@ -227,7 +302,7 @@
  0.30 & 285 & 85.50 & 1037 & 530  \\
  \hline
 \end{tabular}
-\caption{\label{tab1}Rezultatul măsuratoriilor pentru grupa 2 ($35cm$).}
+\caption{\label{tab2}Rezultatul măsuratoriilor pentru grupa 2 ($35cm$).}
 \end{center}
 \end{table}
 
@@ -249,7 +324,7 @@
  0.29 & 298 & 86.42 & 1064 & 525  \\
  \hline
 \end{tabular}
-\caption{\label{tab1}Rezultatul măsuratoriilor pentru grupa 3 ($50cm$).}
+\caption{\label{tab3}Rezultatul măsuratoriilor pentru grupa 3 ($50cm$).}
 \end{center}
 \end{table}
 
@@ -271,12 +346,12 @@
  0.31 & 279 & 86.49 & 1091 & 495  \\
  \hline
 \end{tabular}
-\caption{\label{tab1}Rezultatul măsuratoriilor pentru grupa 4 ($72.8cm$).}
+\caption{\label{tab4}Rezultatul măsuratoriilor pentru grupa 4 ($72.8cm$).}
 \end{center}
 \end{table}
 
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \begin{subfigure}{.45\textwidth}
     \centering
@@ -302,14 +377,40 @@
     \caption{Grupa 4 ($72.8cm$)}
     \label{SUBFIGURE LABEL 4}
 \end{subfigure}
-\caption{Dependența experimentală a tensiuniilor $U_b$ si $U_d$ pentru cele partru grupe}
+\caption{Dependența experimentală a tensiuniilor $U_b$ si $U_d$ pentru cele partru grupe.}
 \label{FIGURE LABEL}
 \end{figure}
 
-\begin{figure}
+
+Pentru a reduce influenta eroriilor asupra curbelor experimentale am realizat media rezultatelor celor patru grupe \ref{tab5} si am refacut graficele $U_b(p*d)$ si $U_d(p*d)$ pentru acestea \ref{FIGURE LABEL 2}. Se in cazul curbei de interpolare pentru $U_b(p*d)$, se observa o mai mare similitudine cu curba Pachen teoretica. Acelasi lucru este valabil si pentru curba de interpolare pentru $U_d(p*d)$, aceasta are varaibilitatea mai mica.
+
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|} 
+ \hline
+ $d[m]$ & $p[mTorr]$ & $p*d[m*mTorr]$ & $U_b[V]$ & $U_d[V]$ \\ 
+ \hline\hline
+0.73 & 43.74 & 31.91 & 1244 & 516  \\
+ \hline
+ 0.63 & 98.00 & 61.12 & 758 & 519  \\
+ \hline
+ 0.51 & 155 & 78.86 & 874 & 508  \\
+ \hline
+ 0.41 & 209 & 84.39 & 991 & 496  \\
+ \hline
+ 0.32 & 272 & 86.79 & 1058 & 513  \\
+ \hline
+\end{tabular}
+\caption{\label{tab5}Rezultatul pentru media celor patru grupelor.}
+\end{center}
+\end{table}
+
+\begin{figure}[H]
+\centering
 \includegraphics[width=.85\linewidth]{medie}  
-    \caption{}
-    \label{FIGURE LABEL 1}
+    \caption{Dependența experimentală a tensiuniilor $U_b$ si $U_d$ pentru cele media celor partru grupe.}
+    \label{FIGURE LABEL 2}
 \end{figure}
 }
 
@@ -322,4 +423,7 @@
 {\section{Concluzii}
 
 }
+
+\printbibliography
+
 \end{document}
