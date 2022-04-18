@@ -188,30 +188,30 @@
 }
 %
 {\section{Principiul Fizic}
-In figura \ref{Montaj} se poate vizualiza diagrama schematica a unui tub de descarcare electrica in aer la presiune scazută.
-Un tub de descărcare electrică consta intr-un tub de sticla sigilat ("Discharge tube") astfel incat sa nu exista schimb de gaz cu exteriorul, presiunea dinăuntrul tubului poate fi intre 1mTorr si 1kTorr\cite{griffiths2005introduction} si este controlata de o pompa cu vid ("To vacuum pump"). In interiorul tubului se afla doi electrozi metalici, intre care se aplica o tensiune continua ce poate fi variata ("High voltage generator"). Aceasta diferenta e potential intre cei electrozi produce aparitia unui camp electric orientat de la anodul pozitiv ("Anode") la catodul negativ("Perforated cathode"). Campul astfel creeat accelereaza electronii liberi catre anon si ionii pozitivi catre catod. Datorita ciocnirii inelatice cu particulele neutre din gaz, daca electronii accelerati ajung la o energie cinetica suficient de mare acestia pot ioniza particulele neutre
+În figura \ref{Montaj} se poate vizualiza diagrama schematică a unui tub de descarcăre electrică în aer la presiune scazută.
+Un tub de descărcare electrică constă într-un tub de sticlă sigilat ("Discharge tube") astfel încat să nu existe schimb de gaz cu exteriorul, presiunea dinăuntrul tubului poate fi între 1mTorr și 1kTorr\cite{griffiths2005introduction} și este controlată de o pompă cu vid ("To vacuum pump"). În interiorul tubului se vor afla doi electrozi metalici, între care se aplică o tensiune continuă ce poate fi variată ("High voltage generator"). Această diferență de potențial între cei doi electrozi produce apariția unui camp electric orientat de la anodul pozitiv ("Anode") la catodul negativ ("Perforated cathode"). Câmpul astfel creat accelereaza electronii liberi către anod și ionii pozitivi către catod. Datorita ciocnirii inelatice cu particulele neutre din gaz, dacă electronii accelerati ajung la o energie cinetică suficient de mare acestia pot excita și ioniza particulele neutre.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=.85\linewidth]{png2pdf}  
-    \caption{Diagrama schematica a unui tub de descarcare electrica in aer la presiune scăzută\cite{hammadi2016employment}.}
+    \caption{Diagrama schematică a unui tub de descarcare electrică în aer la presiune scăzută\cite{hammadi2016employment}.}
     \label{Montaj}
 \end{figure}
 
 
-In continuare vom analiza distributia radiatiei luminoae emise in functie de pozitia din tub. Privind în figura \ref{Montaj1} de la stânga la dreapta se observa:
+În continuare vom analiza distribuția radiației luminoase emise în funcție de poziția din tub. Privind în figura \ref{Montaj1} de la stânga la dreapta se observă:
 
-Stralucirea catodica (cathodic glow), spatiul in care electronii au capatat destula energie pentru a excita atomii din gaz, care se de-exita cu emisie de lumina.
+Strălucirea catodică ("cathodic glow"), spațiul în care electronii au căpătat destulă energie pentru a excita atomii din gaz, care se dezexcită cu emisie de lumină.
 
-Spatiu intunecat catodic (Cathode dark space), spatiul in care electronii capata si mai multa energie, iar acestia nu mai excita atomii ci îi ionizeaza. Proces in urma caruia rezulta ioni si electroni, dar nu si radiatie luminoasa.
+Spatțiu întunecat catodic ("Cathode dark space"), spațiul în care electronii și mai multă energie, iar acestia nu mai excită atomii ci îi ionizează. Proces în urma caruia rezultă ioni și electroni, dar nu și radiație luminoasă.
 
-Stralucirea negativa (Negative glow) , spatiul in care electronii se recombina cu ionii pozitivi, proces in urma caruia rezulta radiatie luminoasa.
+Strălucirea negativă ("Negative glow"), spațiul în care electronii se recombină cu ionii pozitivi, proces în urma căruia rezultă radiație luminoasă.
 
-Spatiu negativ Faraday (Faraday dark space), spatiul dintre stralucirea negativă si strălucirea pozitivă in care nu se emite radiatie luminoasa.
+Spațiu negativ Faraday ("Faraday dark space"), spațiul dintre strălucirea negativă și strălucirea pozitivă în care nu se emite radiație luminoasă.
 
-Coloana pozitiva (Positive column), spatiul in care numarul ioniilor pozitive scade, deci electronii vor avea o energie destul de mare pentru a incepe din nou sa excite atomii care la de-excitare produc radiatie luminoasa.
+Coloana pozitivă ("Positive column"), spațiul în care numărul ioniilor pozitivii scade, deci electronii vor avea o energie destul de mare pentru a începe din nou să excite atomii care la dezexcitare produc radiație luminoasă.
 
-În cadrul coloanei pozitive se observa striatii cauzate de faptul ca atomii pot absorbi energie numai in cantitati discrete.
+În cadrul coloanei pozitive se observă striații cauzate de faptul că atomii pot absorbi energie numai în cantitati discrete.
 
 
 
@@ -220,7 +220,7 @@ Coloana pozitiva (Positive column), spatiul in care numarul ioniilor pozitive sc
 \begin{figure}[H]
 \centering
 \includegraphics[width=.85\linewidth]{dim}  
-    \caption{Distributia radiatiei luminoase in tubul de descarcare.}
+    \caption{Distribuția radiației luminoase în tubul de descarcare.}
     \label{Montaj1}
 \end{figure}
 
@@ -250,33 +250,33 @@ Prin actionarea glisorului din dreapta jos denumit "Pressure" se poate modifica 
 }
 
 {\section{Modul de lucru}
-Se lucreaza la urmatoarele distante intre electrozi: $0.2m$ (grupa 1), $0.35m$ (grupa 2), $0.5m$ (grupa 3) si $0.728cm$ (grupa 4).
+Se lucrează la urmatoarele distanțe între electrozi: $0.2m$ (grupa 1), $0.35m$ (grupa 2), $0.5m$ (grupa 3) si $0.728cm$ (grupa 4).
 
-Pasul 1: Se calculeaza valoriile presiunii ce va fi fixată în simulator dupa formula
+Pasul 1: Se calculează valorile presiunii ce va fi fixată în simulator dupa formula
 \begin{eqnarray}\label{eqq}
 p=\frac{4+n+10(k*n-1)}{d} 
 \tagaddtext{[mTorr]}
 \end{eqnarray}
-unde n este numarul grupei de lucru ($n=\overline{1,4} $), k este numarul masuratorii ($k=\overline{1,5} $) si d este distanta dintre electrozi aferenta grupei de  lucru ($0.2, 0.35, 0.5, 0.728$)[m].
+unde n este numărul grupei de lucru ($n=\overline{1,4} $), k este numărul măsurătorii ($k=\overline{1,5} $) și d este distanța dintre electrozi aferentă grupei de lucru ($0.2, 0.35, 0.5, 0.728$)[m].
 
-Pasul 2: Se alege prima grupa ($n=1$) si prima masuratoare ($k=1$) si se introduc valoriile aferente in formula \ref{eqq}. Valoarea presiunii obtinute se introduce in simulator (se poate alege o valoare de $\pm20\%$ fata de valoare calculata), simulatorul va modifica automat distanta dintre electrozi.
+Pasul 2: Se alege prima grupa ($n=1$) și prima măsuratoare ($k=1$) și se introduc valorile aferente în formula \ref{eqq}. Valoarea presiunii obținute se introduce în simulator (se poate alege o valoare de $\pm20\%$ față de valoare calculată), simulatorul va modifica automat distanța dintre electrozi.
 
-Pasul 3: Se mareste tensiunea dintre electozi pana cand se detecteaza plasma (se ajunge la tensiunea de aprindere, $U_b$). Se noteaza, intr-un tabel, distanta dintre electrozi, presiunea in tub si tensiunea dintre electorzi la momentul detectiei.
+Pasul 3: Se măreste tensiunea dintre electozi păna cand se detectează plasma (se ajunge la tensiunea de aprindere, $U_b$). Se notează, într-un tabel, distanța dintre electrozi, presiunea în tub și tensiunea dintre electorzi la momentul detecției.
 
-Pasul 4: Se micsoreaza tensiunea dintre electrozi pana cand plasma nu mai este vizibila in tub (se ajunge la tensiunea de stingere, $U_d$). Se noteaza, intr-o alta coloana a tabelului de la pasul 3, tensiunea dintre electrozi la momentul stingerii plasmei.
+Pasul 4: Se micsorează tensiunea dintre electrozi pană cand plasma nu mai este vizibilă în tub (se ajunge la tensiunea de stingere, $U_d$). Se notează, într-o altă coloană a tabelului de la pasul 3, tensiunea dintre electrozi la momentul stingerii plasmei.
 
-Se repeta pasii anteriori pentru restul de patru masuratori si restul de trei grupe. Pentru fiecare grupa se va realiza un tabel separat.
+Se repetă pașii anteriori pentru restul de patru măsuratori și restul de trei grupe. Pentru fiecare grupă se va realiza un tabel separat.
 
-Pasul 5: Se reprezinta grafic dependenta tensiuniilor $U_b$si $U_d$ in functie de produsul presiunii si distantei dintre electrozi. Pentru fiecare grupa se va realiza un grafic separat.
+Pasul 5: Se reprezintă grafic dependența tensiuniilor $U_b$ și $U_d$ în funcție de produsul presiunii și distanței dintre electrozi. Pentru fiecare grupă se va realiza un grafic separat.
 
 }
 
 
 {\section{Rezultate}
 
-In urma parcuregerii pasiilor descrisi in sectiunea anterioara au rezultat tabele \ref{tab1}, \ref{tab2}, \ref{tab3}, \ref{tab4} si figuriile \ref{FIGURE LABEL}.
+În urma parcuregerii pașilor descriși în secțiunea anterioară au rezultat tabelele \ref{tab1}, \ref{tab2}, \ref{tab3}, \ref{tab4} și figuriile \ref{FIGURE LABEL}.
 
-Rezultatele obtinute sunt nesatisfacatoare, în cazul grupelor 1 si 3, $U_b(p*d)$ descrie o curba Paschen, dar in cazul grupelor 2 si 4 valoriile obtinute dupa minim cresc mult prea brusc pentru a descrie o curba Paschen, lucru evident daca ne uitam la curba de interpolare, mai ales in cazul grupei 4. Valoriile experimentale pentru $U_d(p*d)$ sunt mult mai satisfacatoare acestea aflandu-se mereu in intervalul (500-600)[V]. Curbele de interpolare ale acestora sunt aproape drepte , fapt ce este in concordanta cu cele asteptate.
+Rezultatele obținute sunt nesatisfacatoare, în cazul grupelor 1 și 3, $U_b(p*d)$ descrie o curbă Paschen, dar în cazul grupelor 2 și 4 valoriile obtinuțe dupa minim cresc mult prea brusc pentru a descrie o curba Paschen, lucru evident daca ne uităm la curba de interpolare, mai ales în cazul grupei 4. Valorile experimentale pentru $U_d(p*d)$ sunt mult mai satisfacatoare acestea aflându-se mereu în intervalul (500-600)[V]. Curbele de interpolare ale acestora sunt aproape drepte, fapt ce este în concordanta cu cele asteptate.
 
 \begin{table}[H]
 \begin{center}
@@ -295,7 +295,7 @@ Rezultatele obtinute sunt nesatisfacatoare, în cazul grupelor 1 si 3, $U_b(p*d)
  0.39 & 227 & 88.76 & 1043 & 502  \\
  \hline
 \end{tabular}
-\caption{\label{tab1}Rezultatul măsuratoriilor pentru grupa 1 ($20cm$).}
+\caption{\label{tab1}Rezultatul măsuratorilor pentru grupa 1 ($20cm$).}
 \end{center}
 \end{table}
 
@@ -318,7 +318,7 @@ Rezultatele obtinute sunt nesatisfacatoare, în cazul grupelor 1 si 3, $U_b(p*d)
  0.30 & 285 & 85.50 & 1037 & 530  \\
  \hline
 \end{tabular}
-\caption{\label{tab2}Rezultatul măsuratoriilor pentru grupa 2 ($35cm$).}
+\caption{\label{tab2}Rezultatul măsuratorilor pentru grupa 2 ($35cm$).}
 \end{center}
 \end{table}
 
@@ -340,7 +340,7 @@ Rezultatele obtinute sunt nesatisfacatoare, în cazul grupelor 1 si 3, $U_b(p*d)
  0.29 & 298 & 86.42 & 1064 & 525  \\
  \hline
 \end{tabular}
-\caption{\label{tab3}Rezultatul măsuratoriilor pentru grupa 3 ($50cm$).}
+\caption{\label{tab3}Rezultatul măsuratorilor pentru grupa 3 ($50cm$).}
 \end{center}
 \end{table}
 
@@ -362,7 +362,7 @@ Rezultatele obtinute sunt nesatisfacatoare, în cazul grupelor 1 si 3, $U_b(p*d)
  0.31 & 279 & 86.49 & 1091 & 495  \\
  \hline
 \end{tabular}
-\caption{\label{tab4}Rezultatul măsuratoriilor pentru grupa 4 ($72.8cm$).}
+\caption{\label{tab4}Rezultatul măsuratorilor pentru grupa 4 ($72.8cm$).}
 \end{center}
 \end{table}
 
@@ -397,9 +397,9 @@ Rezultatele obtinute sunt nesatisfacatoare, în cazul grupelor 1 si 3, $U_b(p*d)
 \label{FIGURE LABEL}
 \end{figure}
 
-Parametrii setati in simulator sunt niste valori medii, în realitate valoare instantanee a distantei dintre electrozi, presiunii si tensiunii dintre electrozi fluctueaza in jurul valorii medii. Acest fapt introduce alte erori in rezultatele experimentale pe langa eroriile cauzate de utilizator precum setarea presiunii la o valoare putin diferita fata de cea calculata cu formula \ref{eqq}.
+Parametrii setați în simulator sunt niste valori medii, în realitate valoare instantanee a distanței dintre electrozi, presiunii și tensiunii dintre electrozi fluctuează în jurul valorii medii. Acest fapt introduce alte erori în rezultatele experimentale pe langa eroriile cauzate de utilizator precum setarea presiunii la o valoare puțin diferită fața de cea calculata cu formula \ref{eqq}.
 
-Pentru a reduce influenta acestor eror am mediat rezultatele celor patru grupe in tabelul\ref{tab5} si am refacut graficele $U_b(p*d)$ si $U_d(p*d)$ pentru noiile valori \ref{FIGURE LABEL 2}. In cazul curbei de interpolare pentru $U_b(p*d)$, se observa o mai mare similitudine cu o curba Pachen teoretica, nemaifiind observata o crestere brusca dupa atingerea minimului. In curba de interpolare pentru $U_d(p*d)$, aceasta este aproximata tot printr-o dreapta dar are varaibilitatea mai mica, iar valoriile experimentale sunt distribuite mult mai apropae de valoarea asteptata de 510V.
+Pentru a reduce influența acestor erori am mediat rezultatele celor patru grupe în tabelul\ref{tab5} și am refăcut graficele $U_b(p*d)$ și $U_d(p*d)$ pentru noile valori \ref{FIGURE LABEL 2}. În cazul curbei de interpolare pentru $U_b(p*d)$, se observă o mai mare similitudine cu o curba Pachen teoretică, ne mai fiind observată o crestere bruscă după atingerea minimului. Curba de interpolare pentru $U_d(p*d)$ este aproximată tot printr-o dreaptă, dar are varaibilitatea mai mică, iar valoriile experimentale sunt distribuite mult mai apropae de valoarea asteptată de 510V.
 
 
 \begin{table}[H]
@@ -426,7 +426,7 @@ Pentru a reduce influenta acestor eror am mediat rezultatele celor patru grupe i
 \begin{figure}[H]
 \centering
 \includegraphics[width=.85\linewidth]{medie}  
-    \caption{Dependența experimentală a tensiuniilor $U_b$ si $U_d$ pentru cele media celor partru grupe.}
+    \caption{Dependența experimentală a tensiuniilor $U_b$ si $U_d$ pentru cele media celor partrua grupe.}
     \label{FIGURE LABEL 2}
 \end{figure}
 }
@@ -434,7 +434,7 @@ Pentru a reduce influenta acestor eror am mediat rezultatele celor patru grupe i
 
 
 {\section{Studiul eroriilor}
-Am amintit mai sus tipuriile de erori ce influenteaza valoriile obtinute experimental, dar nu am stabilit in ce masura acestea afecteaza rezultatul final. Pentru a obtine o cuantificare a eroriilor vom masura tensiunea de aprindere pentru  presiunea de $100mTorr$ setata in simulator
+Am amintit mai sus tipurile de erori ce influențează valorile obținute experimental, dar nu am stabilit în ce măsura acestea afectează rezultatul final. Pentru a obține o cuantificare a erorilor vom măsura tensiunea de aprindere pentru presiunea de $100mTorr$ setata în simulator
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{|c|c|c|} 
@@ -452,25 +452,25 @@ Am amintit mai sus tipuriile de erori ce influenteaza valoriile obtinute experim
  0.65 & 99 & 908   \\
  \hline
 \end{tabular}
-\caption{\label{tab5}Rezultatul masuratoriilor pentru $p=100mTorr$.}
+\caption{\label{tab5}Rezultatul măsuratorilor pentru $p=100mTorr$.}
 \end{center}
 \end{table}
 
-In contunuare calculam media si abaterea standard si trecem rezultatele in forma
+În continuare calcuăm media și abaterea standard și trecem rezultatele în forma
 \begin{eqnarray}\nonumber
 d=0.63\pm0.01[m]\,, \\ \nonumber
 p=100.2\pm 0.97[mTorr]\,, \\ \nonumber
 U_b=917.40\pm16.64[V]\,.
 \end{eqnarray}
 
-Analizand rezultatul putem spune ca eroriile (cauzate de simulator) pentru presiune si distanta dintre electrozi sunt nesemnificative, eroarea pentru tensiunea de aprindere este aproximativ $2\%$. Deci eroriile introduse de utilizatorul simularii sunt cauza neconcordantei graficelor experimentale \ref{FIGURE LABEL} cu cele teoretice, iar medierea rezultatelor pe fiecare grupa produce un rezulat mai apropiat de realitate.
+Analizând rezultatul putem spune că erorile (cauzate de simulator) pentru presiune și distantă dintre electrozi sunt nesemnificative, eroarea pentru tensiunea de aprindere este aproximativ $2\%$. Deci erorile introduse de utilizatorul simularii sunt cauza neconcordanței graficelor experimentale \ref{FIGURE LABEL} cu cele teoretice, iar medierea rezultatelor pe fiecare grupă produce un rezulat mai apropiat de realitate.
 
 }
 
 
 
 {\section{Concluzii}
-In aceasta lucrare am studiat aprinderea unei descarcari electrice in aer la presiune scăzută. Am determinat tensiuniile de aprindere si de stingere pentru diverse distante dintre electrozi si diferite presiuni. Am reprezentat grafic curba Paschen: dependenta $U_b$ de produsul dintre dinstanta dintre electrozi si presiunea in incinta. Masuratoriile au fost facute prentu patru grupe de lucuru fiecare cu o valaore a distantei dintre electrozi dferita ($0.2, 0.35, 0.5, 0.728$)[m]. Rezultatele sunt satisfacatoare doar pentru doua dintre cele patru grupe de lucrui utilizate, dar medierea valoriilor experimentale permite obtinerea unei curbe Paschen determinata experimental apropiate de cea teoretica.
+În aceast lucrare am studiat aprinderea unei descărcari electrice iîn aer la presiune scăzută. Am determinat tensiuniile de aprindere și de stingere pentru diverse distanțe dintre electrozi și diferite presiuni. Am reprezentat grafic curba Paschen: dependența $U_b$ de produsul dintre dinstanța dintre electrozi și presiunea în incintă. Masurătoriile au fost facute pentru patru grupe de lucuru fiecare cu o valaore a distanței dintre electrozi dferită ($0.2, 0.35, 0.5, 0.728$)[m]. Rezultatele sunt satisfăcatoare doar pentru două dintre cele patru grupe de lucru utilizate, dar medierea valorilor experimentale permite obținerea unei curbe Paschen determinată experimental apropiată de cea teoretică.
 }
 
 \printbibliography
