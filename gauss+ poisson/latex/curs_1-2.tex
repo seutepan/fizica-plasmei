@@ -173,99 +173,125 @@
 3.  Asemănări și deosebiri între distribuțiile Poisson și Gauss.
 }
 %
+{\section{Teorie}
+Diferența fundamentală dintre o distribuție Poisson și o distribuție Gauss este domeniul pe care acestea sunt folosite. Distribuția Poisson este este o distribuție discretă, iar cea Gauss este una continuă. O altă diferență este simetria distribuților. Distribuția Gauss este simetrică față de medie, în timp ce distribuția Poisson este 'inclinată' pozitiv și devine simetrică pe măsură ce media sa crește. Pentru un număr mare de date, distribuția Poisson tinde spre distribuția Gauss deoarece media sa devine suficient de mare astfel încât sa fie simetrică. O altă diferența este faptul ca distribuția Poisson este definită de un singur parametru, pentru ca media sa este egală cu deviația standard, iar distribuția Gauss are nevoie de doi parametri (media și deviația standard).
+}
 {\section{Modul de lucru}
-În această lucrare, dorim să caracterizăm distribuția statistică a pulsurilor electrice obținute pe un detector cu scintilație expus radiațiilor emise de o probă ce conține ${}^{241} Am$, atunci când proba se afla la distanțe diferite fața de detector.
-Astfel, vom face două experiente.
+
+În această lucrare, utilizând montajul din figura\ref{figs}, dorim să caracterizăm distribuția statistică a pulsurilor electrice obținute pe un detecttor Geiger-M$\ddot{u}$ller expus radiaților emise de o probă ce conține ${}^{241} Am$, atunci când proba se află la distanțe diferite față de detector.
+
+\begin{figure}[H]
+\centering
+  \includegraphics[width=0.9\textwidth]{sistem}
+  \caption{\label{figs}Montajul experimental.}
+\end{figure}
+Astfel, vom face două experiențe.
 \subsection{Experiența 1}
 {
-Pentru aceata experiență este necesar să inregistrăm $1024$ de masuratori pentru un timp de numărare de $1s$.
-Proba de ${}^{241} Am$ se va poziționa la o distanță apoximativă de $2cm$ față de detector, iar numărul mediu de impulsuri pentru un timp de numărare de $1s$ sa fie $3-5$.
+Pentru aceată experiență este necesar să înregistrăm $1024$ de măsuratori pentru un timp de numărare de $1s$.
+Proba de ${}^{241} Am$ se va poziționa la o distanță apoximativă de $2cm$ față de detector, iar numărul mediu de impulsuri recomandat pentru un timp de numărare de $1s$ este $3-5$.
+
+
 }
 \subsection{Experiența 2}
 {
-Pentru aceata experiență este necesar să inregistrăm $2048$ de măsuratori pentru un timp de numărare de $1s$.
-Proba de ${}^{241} Am$ se va poziționa la o distanță apoximativă de $1.5cm$ față de detector, iar numărul mediu de impulsuri pentru un timp de numărare de $1s$ sa fie $12-18$.
+Pentru aceată experiență este necesar să înregistrăm $2048$ de măsuratori pentru un timp de numărare de $1s$.
+Proba de ${}^{241} Am$ se va poziționa la o distanță apoximativă de $1.5cm$ față de detector, iar numărul mediu de impulsuri recomandat pentru un timp de numărare de $1s$ este $12-18$.
 }
 \subsection{Prelucrarea datelor}
 {
-Dupa realizarea celor două experiențe se vor reprezenta histogramele masurătoriilor si se vor fita fiecare cu o distributie normala scalata cat si cu o distributie Poisson scalata. Curbele rezultate in urma firatii datelor se vor reprezenta pe acelasi grafic cu histograma pe care au fost fitate. \\
-In continuare, plecand de la datele masuratoriilor se vor calcula si interpreta marimiile: valoare medie, dispersie, abatere standard, asimetria si aplatizarea
+După realizarea celor două experiențe se vor reprezenta histogramele masurătorilor și se vor fita fiecare cu o distribuție normală scalată și cu o distribuție Poisson scalată. Curbele rezultate în urma fitării datelor se vor reprezenta pe acelasi grafic cu histograma pe care au fost fitate. \\
+În continuare, plecând de la datele măsurătorilor se vor calcula și interpreta: valoarea medie, abatera standard, coeficientul de variație, asimetria și aplatizarea.
 }
+Valorile numărului mediu de impulsuri recomandate pe timp de numărare provine din faptul că pentru un număr mare de observații, distribuția Poisson tinde spre distribuția normală. Deci, ne așteptăm ca pentru experiența 1 să se obțină o distribuție Poisson și pentru experiența 2 sa se obtină o distribuție Gauss.
 }
 
 
 {\section{Rezultate}
-In urma celor doua masuratori au rezultat datele reprezentate grafic in Fig \ref{fig1} si Fig \ref{fig2}
+În urma celor două măsurători au rezultat datele reprezentate grafic în Fig \ref{fig1} și Fig \ref{fig2}
 \begin{figure}[H]
 \centering
   \includegraphics[width=0.9\textwidth]{poiss_mas}
-  \caption{\label{fig1}Rezultatul experienței 1 (evenimente pe secunda).}
+  \caption{\label{fig1}Rezultatul experienței 1 (evenimente pe secundă în timp).}
 \end{figure}
 
 \begin{figure}[H]
 \centering
   \includegraphics[width=0.9\textwidth]{gauss_mas}
-  \caption{\label{fig2}Rezultatul experienței 2 (Evenimente pe secunda).}
+  \caption{\label{fig2}Rezultatul experienței 2 (Evenimente pe secundă în timp).}
 \end{figure}
 %
-Prin fitare cu o distributie normala scalata obtinem (unde coeficientii $1$ si $2$ marcheaza functia de fitare pentru experiența 1 respectiv 2)
+Prin fitare cu o distribuție normală scalată obținem (unde coeficienții $1$ și $2$ marchează funcția de fitare pentru experiența 1, respectiv 2)
 %
 \begin{eqnarray}\nonumber
 f_1 &=& 1036 N(3.16,1.87^2)\,,\\ \nonumber
-f_2 &=& 2045 N(13.5,3.73^2)\,,
+f_2 &=& 2045 N(13.8,3.73^2)\,,
 \end{eqnarray}
 %
-unde $N(a,b)$ este distrubutia normala cu valoarea medie $a$ si deviatia standard $b$.\\
+unde $N(a,b)$ este distrubuția normală cu valoarea medie $a$ și deviația standard $b$.\\
 %
-Prin fitare cu o distributie Poisson obtinem 
+Prin fitare cu o distribuție Poisson scalată obținem 
 %
 \begin{eqnarray}\nonumber
 f_1 &=& 1023 P(3.43)\,,\\ \nonumber
-f_2 &=& 2039 P(13.8)\,,
+f_2 &=& 2039 P(13.5)\,,
 \end{eqnarray}
-unde $P(a)$ este distrubutia Poisson cu valaorea medie $a$.
+unde $P(a)$ este distrubuția Poisson cu valoarea medie (egală cu deviația standard) $a$.
 
 
-Curbele obtinute in urma fitariilor impreuna cu histogramele pe care au fost fitate au fost reprezentate grafic in Fig \ref{fig3} si Fig \ref{fig4}
+Curbele obținute în urma fitărilor impreună cu histogramele pe care au fost fitate au fost reprezentate grafic în Fig \ref{fig3} si Fig \ref{fig4}.
 
 
 \begin{figure}[H]
 \centering
   \includegraphics[width=0.9\textwidth]{poiss_hist}
-  \caption{\label{fig3}Histograma + Norm + Poiss Masuratoarea 1.}
+  \caption{\label{fig3}Histograma, fitare cu o distribuție Poisson scalată (verde) și fitare cu o distribuție normală scalată (albastru) pentru experiența 1.}
 \end{figure}
 
 \begin{figure}[H]
 \centering
   \includegraphics[width=0.9\textwidth]{gauss_hist}
-  \caption{\label{fig4}Histograma + Norm + Poiss Masuratoarea 2.}
+  \caption{\label{fig4}Histograma, fitare cu o distribuție Poisson scalată (albastru) și fitare cu o distribuție normală scalată (verde) pentru experiența 2.}
 \end{figure}
 
 
 
 
-
+Calculăm de asemenea unele mărimi statistice pentru cele două distribuții \ref{tab1}
 
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|c|c|} 
  \hline
- Experienta & val. medie & dispersie & deviatie standard & asimetria & aplatizarea& interval \\ 
+ Experiența & Val. medie & Deviație standard  & Coef. de variație & Asimetrie & Aplatizare & Interval \\ 
  \hline\hline
- 2 & 13.84 & 14.01 & 3.74 & 0.29 & -0.02 & 4-28 \\
+ 1 & 3.41 & 1.85 & 0.53 & 0.54 & 0.34 & 0-11 \\
  \hline
- 1 & 3.41 & 3.44 & 1.85 & 0.54 & 0.34 & 0-11 \\
-
+ 2 & 13.84 & 3.74 & 0.26 & 0.29 & -0.02 & 4-28 \\
  \hline
 \end{tabular}
-\caption{\label{tab1}Unele marimi caracteristice pentru distributia statsitica a masuratoriilor.}
+\caption{\label{tab1}Unele mărimi caracteristice pentru distribuția statsitică a experiențelor.}
 \end{center}
 \end{table}
-Pentru a ințelege mai bine asemanariile si deosebiriile intre cele doua distributii  trebuie sa comparam marimiile caracteristice calculate anterior\\
-1) Valoare medie reprezinta tendința centrala a datelor masurate. In cazul nostru, pentru experienta 1  aveem o valoare medie de 3.41, iar pentru experiența 2 o valoare medie dde 13.84.
- Putem comparara aceste valori cu cele recomandate in instructiuni, pentru experienta 1 se recomanda obtinerea de valori in intervalul 3-5, iar pentru experienta 2 se recomanda obtinerea de valori in intervalul 12-18. Prin analiza valoriilor medii putem confirma faptul ca experientele s-au desfasurat in parametrii recomandati\\
-2)
 
+Putem astfel compara parametrii obținuți la funcțile de fitare cu parametri reali ale distribuților statistice ale celor două experiențe. În cazul experienței 1 fitarea cu parametri cei mai apropiați de realitate este fitarea cu o distribuție Poisson scalată (am comparat valoarea medie reala de 3.41 și valorile medii obținute in cazul fitarilor, 3.16 pentru fitarea cu o distribuție normală scalată și 3.43 pentru fitarea cu o distribuție Poisson scalată).
+În cazul experienței 2 fitarea cu parametri cei mai apropiați de realitate este fitarea cu o distribuție normală scalată (am comparat valoarea medie reala de 13.84 si valorile medii obținute în cazul fitarilor, 13.8 pentru fitarea cu o distribuție normală scalată și 13.5 pentru fitarea cu o distribuție Poisson scalată).
+Deci, distribuția statistică obținută pentru experiența 1 este una apropiată de o distribuție Poisson și distribuția statisitcă obținută pentru experineța 2 este una apropiată de o distribuție Gauss (normală).
+
+Pentru a ințelege mai bine asemănările și deosebirile între cele doua distribuții trebuie să comparăm mărimile caracteristice calculate anterior.
+
+1) Valoarea medie reprezintă tendința centrală a datelor măsurate. În cazul nostru, pentru experiența 1  avem o valoare medie de 3.41, iar pentru experiența 2 o valoare medie de 13.84.
+Putem comparara aceste valori cu cele recomandate în instrucțiuni, pentru experiența 1 se recomandă obținerea de valori în intervalul 3-5, iar pentru experiența 2 se recomandă obținerea de valori în intervalul 12-18. Prin analiza valorilor medii putem confirma faptul că experiențele s-au desfășurat în parametrii recomandați.
+
+2) Deviația standard este o reprezentare a dispersiei unei distribuții. O valoare mică a deviației standard arată că distribuția este mai concentrată în jurul valorii medii, iar o valoare mare a deviației standard arată o imprăștiere mai mare a datelor din distribuție. Având în vedere că valoare medie a celor două distribuții pe care dorim să le comarăm este foarte diferită, în locul deviației standard vom compara coeficientul de variație, calculat ca raportul dintre deviația standard și valoarea medie. Astfel, observăm ca distribuția statistică a primei experiențe este mai puțin concentrată în jurul valorii de medie decât distribuția statistică a celei de-a doua experinețe
+
+3) Asimetria reprezintă deviația fața de o distribuție normală perfect simetrică. Observăm ca asimetria pentru experiența 1 este de doua ori mai mare decat asimetria pentru experiența 2. Acest lucru arata ca distribuția obținută pentru experiența 2 este mai apropiata de o distribuție normală decat distribuția obținută pentru experiența 1.
+
+4) Aplatizarea este masurată fața de distribuția normală. Deci, o valoare pozitivă a aplatizării înseamnă ca distribuția statistică masurată are o coada mai 'subțire' decat o distribuție normală cu aceeași valoare medie și deviație standard și deci un vărf mai ridicat. Opusul este adevărat pentru o valoare a aplatizării negativă, distribuția are o coadă mai 'grasă' și deci un vârf mai scăzut. În cazul nostru, observăm că experiența 2 are o valaore a aplatizării de -0.02, deci foarte aproape de o distribuție normală perfectă, în timp ce experința 1 are aplatizarea de 0.34, deci un vârf mai ridicat și o coada mai 'subtire' decât o distribuție normală perfectă. 
+
+5) Intervalul de valori este folosit pentru a localiza limitele distribuțiilor pe axa OX a histogramelor. Observam de intervalul de valori pentru experiența 2 este aproape de două ori mai larg decât intervalul de valori a experienței 1. Totuși, valoarea medie și deviația standard nu sunt de doua ori mai mari în cazul experienței 2 fața de experineța 1. Aest lucru ne arată că distribuția statistică pentru experiența 1 este alta fața de distribuția statistică pentru experiența 2.
+
+Concluziile acestei mici analize statistice a rezultatelor experimentale este că distribuțiile statistice pentru experiența 1 si 2 sunt diferite, iar distribuția statistică pentru experiența 2 este apropiată de o distribuție Gauss (normală) și distribuția statistică pentru experiența 1 este apropiata de o distribuție Poisson.
 }
 
 
@@ -275,6 +301,6 @@ Pentru a ințelege mai bine asemanariile si deosebiriile intre cele doua distrib
 
 
 {\section{Concluzii}
-
+În această lucrare am măsurat experimental distribuția statistică a pulsurilor electrice obținute de un detector expus radiaților emise de o proba de  ${}^{241} Am$. Am observat că prin plasarea probei radioactive la diferite distanțe de detector se obțin distribuții statistice diferite. Am analizat și caracterizat două astfel de distribuții statistice și am ajuns la concluzia că o valoare mică a distanței dintre proba radioactivă si detector conduce la o distribuție Gaussiană (normală), iar o valoare mare a distanței dintre proba radioactivă și detector conduce la o distribuție Poisson. Acest lucru este datorat numărului de evenimente înregistrate pe secundă, fapt ce se leaga de diferența fundamentală între o distribuție Poisson si una Gauss, distribuția Poisson este una discretă deci numarul de evenimente întregistrate pe secundă este mic, iar distribuția Gauss este una continuă, deci numar de întregistrari pe secunda mare.
 }
 \end{document}
