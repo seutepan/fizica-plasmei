@@ -174,10 +174,14 @@
 }
 %
 {\section{Principiul fizic}
+O lampă cu descărcare în gaz produce lumină printr-o descărcare electrică într-un gaz ionizat, adică plasmă.
+Principul de funcționare a acestora este bazat pe crearea unui câmp electric între anodul și catodul lămpii. Câmpul astfel creat accelerează electronii liberi către anod și ionii pozitivi către catod. Datorită ciocnirii inelastice cu particulele neutre din gaz, dacă electronii accelerați ajung la o energie cinetică suficient de mare aceștia pot excita și ioniza particulele neutre. Deoarece stăriile excitate sunt instabile, acestea sunt urmate imediat de un proces de dezexcitare și eliberare de energie sub forma de radiații. La dezexcitare atomii elementelor chimice emit un spectru de radiații unice pentru fiecare element, astfel, elementele chimice pot fi identificate după aceste spectre. Radiațiile eliberate pot fi în spectrul vizibil sau nu. În lucrarea de fața vom utiliza doar spectrul vizibil, deci spectrul datorat electroniilor ce se găsesc pe orbita periferică a atomiilor.
+Pentru generarea spectrului pornind de la radiația luminoasă emisă de lampa cu decărcare în gaz se va utiliza o prismă optică. Datorită dependenței indicelui de refracție al sticlei de lungimea de undă aceasta va devia sub un unghi diferit radiațiile luminoase, deci se obține o separare a luminii în elementele componente ale acesteia.
 
 }
 {\section{Montajul experimental}
-
+Montajul constă într-o lampă cu descărcare în gaz alimentată de la o sursă. Lumina emisă de lampă se propagă divergent printr-o fantă reglabilă de intrare și mai apoi prin colimator. Lumina cade paralel pe prismă la un unghi mic. Prisma refractă și separă componentele spectrale ale luminii. Spectrul luminii poate fi observat prin telesop.  
+Studierea spectrogramei se face cu ajutorul telecopului ce poate fi rotit fața de prisma din centrul montajului. Deplasarea telesopului în jurul prismei permite măsurarea unghiului la care are loc o anumită linie spectrală. Pentru fixarea telescopului pe linia dorită acesta este prevăzut cu o ' țintă' în formă de X ce se va centra pe linia dorită. 
 
 
 \begin{figure}[H]
@@ -189,32 +193,57 @@
 
 
 {\section{Modul de lucru}
+Pentru pasii ce implică schimbarea lămpii se va apela la profesor.
 
+Pas 1. Se porneste lampa cu descărcare în Heliu și se așteaptă 5 minute să își atingă intensitatea maximă.
+
+Pas 2. Privind pe telescop, acesta se roteste până se observă prima linie spectrală.
+
+Pas 3. Se înregistrează valoarea unghiului la care a fost detectată linia spectrală.
+
+Se repetă pașii 2 și 3 până s-a înregistrat unghiul pentru toate liniile.
+
+Pas 4. Datele înregistrate pentru Heliu se trec într-un tabel, iar acestea sunt folosite pentru a obține o curba de etalonare de forma $\lambda=\lambda(x)$.
+
+Pas 5. Se schimbă lampa de Heliu cu cea de Zinc și se repetă pașii 2 și 3 până ce s-a întregistrat unghiul pentru toate liniile.
+
+Pas 6. Datele întregistrate pentru lampa cu descărcare în Zinc se trec într-un tabel, iar curba de etalonare este folosită pentru a determina lungimea de unda a liniei spectrale întregistrate.
+
+Se repetă pașii 5 și 6 pentru lampa cu descărcare în Cadmiu.
+
+ 
 }
 
 {\section{Rezultate}
+În urma parcurgerii pașilor descriși în secțiunea anterioară rezultă tabelul pentru etolonare \ref{tab1} și curba de etalonare. După ce am aflat curba de etalonare am calculat lungimea de unda experimentală si pentru Heliu.
+\begin{eqnarray}\nonumber
+\lambda=7691.29-57.01 x [nm]\,,
+\end{eqnarray}
+unde x este unghiul la care s-a înregistrat linia spectrală(în grade).
 
+De asemenea, în figura \ref{figs} am reprezentat curba de etalonare și valoriile experimentale pentru lampa cu descărcare în Heliu. 
 
+În următoarele tabele lungimea de undă teoretică este reprezentată prin $\lambda_t$ și lungimea de undă determinată experimental este reprezentată prin $\lambda_e$ 
 \begin{table}[H]
 \begin{center}
-\begin{tabular}{|c|c|c|c|c|} 
+\begin{tabular}{|c|c|c|c|c|c|c|} 
  \hline
- Culoare & Unghi (grade) & $\lambda$ teoretică(nm)  & $\lambda$ experimentală (nm) & Tranziție  \\ 
+ Culoare & Unghi [grade] & $\lambda_t$[nm]  & $\lambda_e$ [nm] & Tranziție & $\Delta$ E[eV] & $E_{foton}$[eV] \\ 
  \hline\hline
- roșu & 123.5 & 668 & 639 &  ${3}^{1}D_2 \rightarrow {2}^{1}P_1$ \\
+ roșu & 123.5 & 668 & 639 &  ${3}^{1}D_2 \rightarrow {2}^{1}P_1$ & 1.8561 &1.9402 \\
  \hline
- portocaliu & 124.3 & 587 & 593 &  ${3}^{3}D \rightarrow {2}^{3}P$  \\
+ portocaliu & 124.3 & 587 & 593 &  ${3}^{3}D \rightarrow {2}^{3}P$& 2.1096 &2.090  \\
  \hline
- verde & 125.85 &  504 & 503 &  ${4}^{1}S_0 \rightarrow {2}^{1}P_1$  \\
+ verde & 125.85 &  504 & 503 &  ${4}^{1}S_0 \rightarrow {2}^{1}P_1$ &  2.4556&2.4649 \\
  \hline
- verde & 126.35 &492 & 486 & ${4}^{1}D_2 \rightarrow {2}^{1}P_1$  \\
+ verde & 126.35 &492 & 486 & ${4}^{1}D_2 \rightarrow {2}^{1}P_1$ &  2.5183&2.5511 \\
  \hline
- albastru & 127.1 & 447 & 431 & ${4}^{3}D \rightarrow {2}^{3}P$  \\
+ albastru & 127.1 & 447 & 431 & ${4}^{3}D \rightarrow {2}^{3}P$ & 2.7720 & 2.8766\\
  \hline
- violat & 127.25 & 438 & 422 & ${5}^{1}D_2 \rightarrow {2}^{1}P_1$  \\
+ violat & 127.25 & 438 & 422 & ${5}^{1}D_2 \rightarrow {2}^{1}P_1$ & 2.8248 &2.9380 \\
  \hline
 \end{tabular}
-\caption{\label{tab1}Tabelul pentru etalonare cu ajutorul lampii cu descărcare în Heliu.}
+\caption{\label{tab1}Tabelul pentru etalonare cu ajutorul lămpii cu descărcare în Heliu.}
 \end{center}
 \end{table}
 
@@ -223,54 +252,78 @@
 \begin{figure}[H]
 \centering
   \includegraphics[width=0.9\textwidth]{regr}
-  \caption{\label{figs}Dreapta de regresie și valorile experimentale pentru lampa cu descărcare în Heliu.}
+  \caption{\label{figs}Curba de etalonare și valorile experimentale pentru lampa cu descărcare în Heliu.}
 \end{figure}
 
+În continuare, utilizând curba de etalonare obținută anterior împreuna cu datele experimentale calculăm lungimea de undă experimentală ($\lambda_e$) pentru lampa cu descărcare în Cadmiu (tabelul \ref{tab2}) și pentru lampa cu descărcare în Zinc (tabelul \ref{tab3}).
+
 \begin{table}[H]
 \begin{center}
-\begin{tabular}{|c|c|c|c|c|} 
+\begin{tabular}{|c|c|c|c|c|c|c|} 
  \hline
- Culoare & Unghi (grade) & $\lambda$ teoretică(nm)  & $\lambda$ experimentală (nm) & Tranziție  \\ 
+ Culoare & Unghi [grade] & $\lambda_t$[nm]  & $\lambda_e$ [nm] & Tranziție & $\Delta$ E[eV] & $E_{foton}$[eV] \\ 
  \hline\hline
- roșu & 124 & 643 & 620 &  ${5}^{1}D_2 \rightarrow {5}^{1}P_1$ \\
+ roșu & 124 & 643 & 620 &  ${5}^{1}D_2 \rightarrow {5}^{1}P_1$&  1.9251&1.9997  \\
  \hline
- verde & 125.6 & 508 & 529 &  ${6}^{3}S_1 \rightarrow {5}^{3}P_2$  \\
+ verde & 125.6 & 508 & 529 &  ${6}^{3}S_1 \rightarrow {5}^{3}P_2$  & 2.4372 & 2.3437\\
  \hline
- albastru & 126.25 & 479 & 492 &  ${6}^{3}S_1 \rightarrow {5}^{3}P_1$  \\
+ albastru & 126.25 & 479 & 492 &  ${6}^{3}S_1 \rightarrow {5}^{3}P_1$  & 2.5823 &2.5200 \\
  \hline
- ablastru & 126.65 & 467 & 469 &  ${6}^{3}S_1 \rightarrow {5}^{3}P_0$ \\
+ ablastru & 126.65 & 467 & 469 &  ${6}^{3}S_1 \rightarrow {5}^{3}P_0$&2.6495  &2.6435  \\
  \hline
- mov & 127.2 & 441 & 438 & ${6}^{1}S_0 \rightarrow {5}^{3}P_1$  \\
+ mov & 127.2 & 441 & 438 & ${6}^{1}S_0 \rightarrow {5}^{3}P_1$  &2.8087  &2.8307 \\
  \hline
 \end{tabular}
-\caption{\label{tab2}Determinarea valorii lungimii de undă penntru lampa cu descărcare in Cadmiu.}
+\caption{\label{tab2}Determinarea lungimii de undă pentru lampa cu descărcare în Cadmiu.}
 \end{center}
 \end{table}
 
 
 \begin{table}[H]
 \begin{center}
-\begin{tabular}{|c|c|c|c|c|} 
+\begin{tabular}{|c|c|c|c|c|c|c|} 
  \hline
- Culoare & Unghi (grade) & $\lambda$ teoretică(nm)  & $\lambda$ experimentală (nm) & Tranziție  \\ 
+ Culoare & Unghi [grade] & $\lambda_t$[nm]  & $\lambda_e$ [nm] & Tranziție & $\Delta$ E[eV] & $E_{foton}$[eV] \\ 
  \hline\hline
- roșu & 123.85 & 636 & 629 &  ${4}^{1}D_2 \rightarrow {4}^{1}P_1$ \\
+ roșu & 123.85 & 636 & 629 &  ${4}^{1}D_2 \rightarrow {4}^{1}P_1$ & 1.9482 &1.9711 \\
  \hline
- verde & 125.5 & 518 & 535 &  ${6}^{1}S_0 \rightarrow {4}^{1}P_1$  \\
+ verde & 125.5 & 518 & 535 &  ${6}^{1}S_0 \rightarrow {4}^{1}P_1$  &2.3919  &2.3174 \\
  \hline
- albastru & 126.05 & 481 & 504 &  ${5}^{3}S_1 \rightarrow {4}^{3}P_2$  \\
+ albastru & 126.05 & 481 & 504 &  ${5}^{3}S_1 \rightarrow {4}^{3}P_2$ &2.5766  & 2.4600 \\
  \hline
- ablastru & 126.55 & 472 & 475 &  ${5}^{3}S_1 \rightarrow {4}^{3}P_1$ \\
+ ablastru & 126.55 & 472 & 475 &  ${5}^{3}S_1 \rightarrow {4}^{3}P_1$&2.6248  &  2.6102\\
  \hline
- albastru & 126.8 & 468 & 461 & ${5}^{3}S_1 \rightarrow {4}^{3}P_0$  \\
+ albastru & 126.8 & 468 & 461 & ${5}^{3}S_1 \rightarrow {4}^{3}P_0$& 2.6484 &  2.6894 \\
  \hline
 \end{tabular}
-\caption{\label{tab3}Determinarea valorii lungimii de undă penntru lampa cu descărcare in Zinc..}
+\caption{\label{tab3}Determinarea lungimii de undă pentru lampa cu descărcare în Zinc.}
 \end{center}
 \end{table}
 
+Pentru identificarea elementelor chimice din plasma de descărcare se pot compara specrele înregistrate experimental(figuriile \ref{heliu} \ref{cadmiu} \ref{zinc}) cu o bază de date a spectrelor a tuturor elementelor chimice.
 
 
+\begin{figure}[H]
+\centering
+  \includegraphics[width=0.9\textwidth]{heliu}
+  \caption{\label{heliu}Spectrul pentru plasma de descărcare în Heliu.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+  \includegraphics[width=0.9\textwidth]{cadmiu}
+  \caption{\label{cadmiu}Spectrul pentru plasma de descărcare în Cadmiu.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+  \includegraphics[width=0.9\textwidth]{zinc}
+  \caption{\label{zinc}Spectrul pentru plasma de descărcare în Zinc.}
+\end{figure}
+
+Structura fină, divizarea liniilor spectrale ale atomilor din cauza spinului electronului și corecțiilor relativiste la ecuația Schrödinger pot fi observate în tabelele \ref{tab2} și \ref{tab3}, pentru unele tranziții se observa structura fină ${6}^{3}S_1 \rightarrow {5}^{3}P_2$, ${6}^{3}S_1 \rightarrow {5}^{3}P_1$ si  ${6}^{3}S_1 \rightarrow {5}^{3}P_0$ pentru Cadmiu și tranzițiile ${5}^{3}S_1 \rightarrow {4}^{3}P_2$, ${5}^{3}S_1 \rightarrow {4}^{3}P_1$ si ${5}^{3}S_1 \rightarrow {4}^{3}P_0$ pentru Zinc. Pentru aceste tranziții, dacă ne uităm la coloana $\Delta$ E ar trebuii să observăm că valoriile sunt foarte apropiate, lucru care se confirmă. De asemenea același comportament se observă la $\Delta$ E  experimental (adica energia fotonului emis $E_{foton}$).
+
+Eroarea pătratica medie a lungimiilor de undă determinate experimental este 15.41 pentru Heliu, 15.17 pentru Cadmiu și 13.60 pentru Zinc. Surprinzător este faptul că eroarea pentru Heliu este mai mare decat pentru Zinc și Cadmiu chiar dacă etalonarea s-a făcut după valoriile experimentale ale Heliului. Un motiv pentru acest fenomen poate fi faptul că la citirea unghiului pentru Heliu nu s-a privit perpendicular pe planul riglei unghiulare. Această eroare de citire de câteva zecimi de grade poate să fi influențat rezultatul. O altă explicație esta că, din grabă, 'ținta' de pe telesopul cu care se localizează liniile spectrale nu a fost poziționată corespunzator, în special pentru liniile care nu au o intensitate puternică.
 
 
 }
@@ -281,5 +334,6 @@
 
 
 {\section{Concluzii}
+În această lucrarea am studiat funcționarea lămpiilor cu descărcare în Heliu, Cadmiu și Zinc. Am determinat experimental unghiul la care apar liniile spectrale ale plasmei de descărcare și prin etalonarea cu ajutorul lampii cu descărcare în Heliu am determinat lungimea de undă a liniilor spectrale a celorlalte două lămpi. Am observat stuctura fină în lampiile cu descărcare în Cadmiu și Zinc. Am propus un procedeu pentru identificarea elementelor chimice din plasma de descărcare.
 }
 \end{document}
