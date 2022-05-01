@@ -170,7 +170,7 @@
 %%%
 
 
-\title{Studiul descărcării luminescente. Obținerea curbei lui Paschen}
+\title{Mișcarea particulelor încărcate în câmp magnetic}
 \author{Ștefan-Răzvan~Anton\\ Anul 3, Grupa 1334,\\ Facultatea de Științe Aplicate}
 
 \begin{document}
@@ -182,7 +182,7 @@
 
 {\section{Scopul lucrării}
 %
-1.  Analiza mișcării unei particule încărcate in funcție de sarcina ei într-un câmp magnetic.\\
+1.  Analiza mișcării unei particule încărcate in funcție de sarcina ei într-un câmp magnetic omogen.\\
 2.  Utilizarea unui câmp magnetic pentru controlul unei particule încărcate în aproximația 3D.\\
 3.  Evidențierea influenței distribuției după energie asupra traiectoriei de mișcare.\\
 4.  Utilizarea montajului experimental pentru realizarea unei proceduri de control a traiectoriei particulelor încărcate.
@@ -190,7 +190,7 @@
 %
 {\section{Principiul fizic}
 {\subsection{Analiza mișării unei particule încărcate în funcție de sarcina ei intr-un câmp magnetic}
-În aproximația 2D, într-un câmp magnetic omogen, o particulă incărcata se va mișca după o orbită circulară fixă. Astfel, forta Lorentz si forța centrifugă sunt in echilibru
+În aproximația 2D, într-un câmp magnetic omogen, o particulă incărcata se va mișca după o orbită circulară fixă. Astfel, forța Lorentz și forța centrifugă sunt in echilibru
 \begin{eqnarray}
 q v B=\frac{m v^2}{r}\,.
 \end{eqnarray}
@@ -200,50 +200,57 @@ r=\frac{m v}{qB}\,,
 \end{eqnarray}
 unde $m$, $v$, $q$ sunt masa, viteza respectiv sarcina particulei, iar B este intensitatea câmpului magnetic.
 
-În figura \ref{mis1} avem două cazuri de mișcare a unei particule încărcate în câmp magentic în funcție de sarcina acesteia. Obserăm că, pentru doua sarcini egale dar de semn opus, mișcarea particulei descrie tot un cerc, dar sensul de parcurgere al acestuia este diferit. Putem afla sensul utilizând regula mâinii drepte
+În figura \ref{mis1} avem două cazuri de mișcare a unei particule încărcate în câmp magentic în funcție de sarcina acesteia. Obserăm că, pentru două sarcini egale dar de semn opus, mișcarea particulei descrie același cerc, dar sensul de parcurgere al acestuia este diferit. Sensul se poate afla utilizând regula mâinii drepte.
 
 \begin{figure}[H]
 \centering
 \begin{subfigure}{.45\textwidth}
     \centering
     \includegraphics[width=.95\linewidth]{qpozitiv}  
-    \caption{Sarcină pozitivă}
+    \caption{Sarcină pozitivă.}
     \label{Sarcină pozitivă}
 \end{subfigure}
 \begin{subfigure}{.45\textwidth}
     \centering
     \includegraphics[width=.95\linewidth]{qnegativ}  
-    \caption{Sarcină negativă}
+    \caption{Sarcină negativă.}
     \label{Sarcină negativă}
 \end{subfigure}
-\caption{Mișcarea în câmp magnetic omogen ce iese din foaie a două particule de sarcină egala dar semn contrar.}
+\caption{Mișcarea într-un câmp magnetic omogen, ce iese din foaie, a două particule de sarcină egala și semn contrar.}
 \label{mis1}
 \end{figure}
 }
 
-Remarcăm de asemenea faptul că raza cercului pe care se mișcă particula încărcată este invers proporțîonală cu sarcina acesteia. În figura \ref{mis2} se observă reducerea la jumâtate a razei cercului atunci când se dubleaza sarcina 
+Observăm și faptul că raza cercului pe care se mișcă particula încărcată este invers proporțională cu sarcina particulei. În figura \ref{mis2} se observă reducerea la jumâtate a razei cercului atunci când se dubleaza sarcina. 
 
 \begin{figure}[H]
 \centering
 \begin{subfigure}{.45\textwidth}
     \centering
     \includegraphics[width=.95\linewidth]{q5}  
-    \caption{Miscarea pentru o particulă de sarcina q}
+    \caption{Mișcarea pentru o particulă de sarcină q.}
     \label{Sarcină pozitivă}
 \end{subfigure}
 \begin{subfigure}{.45\textwidth}
     \centering
     \includegraphics[width=.95\linewidth]{q10}  
-    \caption{Miscarea pentru o particulă de sarcina 2q}
+    \caption{Mișcarea pentru o particulă de sarcină 2q.}
     \label{Sarcină negativă}
 \end{subfigure}
-\caption{Mișcarea în câmp magnetic omogen, ce iese din foaie, a două particule de sarcini diferite.}
+\caption{Mișcarea într-un câmp magnetic omogen, ce iese din foaie, a două particule de sarcină diferită.}
 \label{mis2}
 \end{figure}
 
 \subsection{Utilizarea unui câmp magnetic pentru controlul unei particule încărcate în aproximația 3D}
 {
- În aproximația 3D mișcarea unei particule încăracate are o formă mai complexă, aceasta urmează o traiectorie helicoidala, ca cea reprezentată în figura \ref{helic}
+Dacă, în schimb, particula pătrunde sub un unghi oarecare în câmp magnetic omogen, atunci 
+viteza particulei poate fi descompusă după două direcţii, una paralelă cu linia de câmp magnetic şi 
+alta perpendiculară pe linia de câmp. Componenta perpendiculară dă o forţa Lorentz nenulă ce va 
+determina o mişcare circulară cu o anume perioada şi de o anumită rază, în timp ce componenta 
+paralelă a vitezei va da o mişcare de translaţie în jurul liniei de câmp. Ca urmare, particula descrie o 
+mişcare elicoidală cu un pas ce depinde de componenta paralelă a vitezei şi de perioada mişcării 
+circulare
+În aproximația 3D mișcarea unei particule încăracate are o formă mai complexă, aceasta urmează o traiectorie helicoidală, ca cea reprezentată în figura \ref{helic}.
 
 \begin{figure}[H]
 \centering
@@ -251,7 +258,7 @@ Remarcăm de asemenea faptul că raza cercului pe care se mișcă particula înc
   \caption{\label{helic}Traiectoria helicoidală a unei particule încarcate in aproxiamția 3D.}
 \end{figure}
 
-In fizica plasmei este important fenomenul de refelxie magnetică, datorat faptului ca forța care actioneaza asupra unei particule incarcata electric este orientata intotdeauna spre campuri mai slabe.Asta inseamna ca, in miscarea sa, o particula poate intalni un camp magnetic care sa o opreasca si sa determine intoarcerea acesteia din ensul in care a venit.Fenomenul de reflexie magnetica permite creearea de oglinzi magnetice (vezi figura \ref{oglinda})
+Putem astfel descrie o configurație de câmp magnetic de poate fi utilizat pentru controlul practic al unei particule încărcate. În fizica plasmei o astfel de configurație este un câmp ce permite fenomenul de refelxie magnetică. Acest fenomen este datorat faptului că forța care acționează asupra unei particule încărcate electric este orientată întotdeauna spre câmpuri mai slabe. Asta înseamnă că, în mișcarea sa, o particulă poate întalni un camp magnetic care să o oprească și să determine întoarcerea acesteia din sensul în care a venit. Acest fenomen, de reflexie magnetică, permite creearea de oglinzi magnetice (vezi figura \ref{oglinda})
 
 \begin{figure}[H]
 \centering
@@ -259,12 +266,12 @@ In fizica plasmei este important fenomenul de refelxie magnetică, datorat faptu
   \caption{\label{oglinda}miscarea unei particule incarcate intr-o oglinda magnetica.}
 \end{figure}
 
-Fenomenul de reflexie magnetica permite creearea de oglinzi magnetice, folosite in realizarea capcanelor magnetice. Cea mai simpla capcana magentica se obtine folsind doua spire de curent apropiate prin care circula curenti elevtrici in acelasi sens (vezi figura \ref{sticla})
+Oglinzile magnetice au o puternică întrebuințare în fizica plasmei prin faptul că sunt folosite în realizarea capcanelor magnetice, un dispozitiv vital în confinarea magnetică a plasmei de fuziune. Cea mai simplă capcană magentică se obține folsind două spire de curent apropiate, prin care circulă curenți electrici în același sens (vezi figura \ref{sticla}).
 
 \begin{figure}[H]
 \centering
   \includegraphics[width=0.9\textwidth]{sticla}
-  \caption{\label{sticla}Ansamblu de spire de curent ce formeaza o capcana magentica.}
+  \caption{\label{sticla}Ansamblu de spire de curent ce formează o capcană magentică.}
 \end{figure}
 }
 
@@ -282,21 +289,21 @@ Fenomenul de reflexie magnetica permite creearea de oglinzi magnetice, folosite 
 
 
 {\section{Modul de lucru}
-Pasul 1: Se înregistrează numarul e impulsuri (F) pentru radiatia de fond timp de 10 minute ($t_f=10 min =600s$)si se calculeaza viteza de numarare a fondului cu formula $f=\frac{F}{t_f}$ [imp/s].
+Pasul 1: Se înregistrează numărul e impulsuri (F) pentru radiația de fond timp de 10 minute ($t_f=10 min =600s$) și se calculează viteza de numărare a fondului cu formula $f=\frac{F}{t_f}$ [imp/s].
 
-Pasul 2: Se introduce sursa de ${}^{90}Sr$ in suportul circular si se cupleaza borna pozitiva a sursei de alimentarela borna $\beta^-$ a bobinei.
+Pasul 2: Se introduce sursa de ${}^{90}Sr$ în suportul circular și se cuplează borna pozitivă a sursei de alimentare la borna $\beta^-$ a bobinei.
 
-Pasul 3: Se seteaza intensitatea curentului brin bobina la prima valoare din tabelul \ref{tab1}
+Pasul 3: Se setează intensitatea curentului brin bobină la prima valoare din tabelul \ref{tab1}.
 
-Pasul 4: Se seteaza ceasul numaratorului la $t= 60s$ si se inregistreaza numarul de impulsuri [N], rezultatul se trece in tabelul \ref{tab1}
+Pasul 4: Se setează ceasul număratorului la $t= 60s$ și se inregistrează numărul de impulsuri [N], rezultatul se trece în tabelul \ref{tab1}.
 
-Pasul 5: Se calculeaza viteza de numarare a cu formula $n'=\frac{N}{t}$ [imp/s] si separat se scade viteza de numarare a fondului $n=n'-f$.
+Pasul 5: Se calculează viteza de numărare cu formula $n'=\frac{N}{t}$ [imp/s] și separat se scade viteza de numărare a fondului $n=n'-f$.
 
-Pasul 6: Se repeta masuratoriile restul valoriilor intensitatii curentului prin bobina.
+Pasul 6: Se repetă măsuratoriile pentru restul valorilor intensitații curentului prin bobină.
 
-Pasul 7: Se cupleaza borna pozitiva a sursei de alimentare la borna $\beta^+$ a bobinei.
+Pasul 7: Se cuplează borna pozitivă a sursei de alimentare la borna $\beta^+$ a bobinei.
 
-Pasul 8: Se parcurg aceleasi masuratori ca si in cazul anterior, iar rezultatele se trec in tabelul \ref{tab2}.
+Pasul 8: Se parcurg aceleași măsuratori ca și în cazul anterior, iar rezultatele se trec în tabelul \ref{tab2}.
  
 }
 
