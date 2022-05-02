@@ -243,14 +243,10 @@ Observăm și faptul că raza cercului pe care se mișcă particula încărcată
 
 \subsection{Utilizarea unui câmp magnetic pentru controlul unei particule încărcate în aproximația 3D}
 {
-Dacă, în schimb, particula pătrunde sub un unghi oarecare în câmp magnetic omogen, atunci 
+In schimb,în aproximația 3D, dacă particula pătrunde sub un unghi oarecare în câmpul magnetic, atunci 
 viteza particulei poate fi descompusă după două direcţii, una paralelă cu linia de câmp magnetic şi 
-alta perpendiculară pe linia de câmp. Componenta perpendiculară dă o forţa Lorentz nenulă ce va 
-determina o mişcare circulară cu o anume perioada şi de o anumită rază, în timp ce componenta 
-paralelă a vitezei va da o mişcare de translaţie în jurul liniei de câmp. Ca urmare, particula descrie o 
-mişcare elicoidală cu un pas ce depinde de componenta paralelă a vitezei şi de perioada mişcării 
-circulare
-În aproximația 3D mișcarea unei particule încăracate are o formă mai complexă, aceasta urmează o traiectorie helicoidală, ca cea reprezentată în figura \ref{helic}.
+alta perpendiculară pe linia de câmp. Va exista astfel o mişcare circulară de rază r ca în cazul 2D, combinată cu  o mişcare de translaţie în jurul liniei de câmp. Ca urmare, particula are o 
+traiectorie helicoidaă , ca cea reprezentată în figura \ref{helic}.
 
 \begin{figure}[H]
 \centering
@@ -258,15 +254,15 @@ circulare
   \caption{\label{helic}Traiectoria helicoidală a unei particule încarcate in aproxiamția 3D.}
 \end{figure}
 
-Putem astfel descrie o configurație de câmp magnetic de poate fi utilizat pentru controlul practic al unei particule încărcate. În fizica plasmei o astfel de configurație este un câmp ce permite fenomenul de refelxie magnetică. Acest fenomen este datorat faptului că forța care acționează asupra unei particule încărcate electric este orientată întotdeauna spre câmpuri mai slabe. Asta înseamnă că, în mișcarea sa, o particulă poate întalni un camp magnetic care să o oprească și să determine întoarcerea acesteia din sensul în care a venit. Acest fenomen, de reflexie magnetică, permite creearea de oglinzi magnetice (vezi figura \ref{oglinda})
+Folosind această miscare, putem astfel descrie o configurație de câmp magnetic ce poate fi utilizat pentru controlul practic al unei particule încărcate. În fizica plasmei o astfel de configurație este un câmp ce permite fenomenul de refelxie magnetică. Acest fenomen este datorat faptului că forța care acționează asupra unei particule încărcate electric este orientată întotdeauna spre câmpuri mai slabe. Asta înseamnă că, în mișcarea sa, o particulă poate întalni un camp magnetic care să o oprească și să determine întoarcerea acesteia din sensul în care a venit. Acest fenomen, de reflexie magnetică, permite creearea de oglinzi magnetice (vezi figura \ref{oglinda}).
 
 \begin{figure}[H]
 \centering
   \includegraphics[width=0.9\textwidth]{oglinda}
-  \caption{\label{oglinda}miscarea unei particule incarcate intr-o oglinda magnetica.}
+  \caption{\label{oglinda}Mișcarea unei particule încarcate într-o oglindă magnetică.}
 \end{figure}
 
-Oglinzile magnetice au o puternică întrebuințare în fizica plasmei prin faptul că sunt folosite în realizarea capcanelor magnetice, un dispozitiv vital în confinarea magnetică a plasmei de fuziune. Cea mai simplă capcană magentică se obține folsind două spire de curent apropiate, prin care circulă curenți electrici în același sens (vezi figura \ref{sticla}).
+Oglinzile magnetice au o puternică întrebuințare în fizica plasmei prin faptul că sunt folosite în realizarea capcanelor magnetice, un dispozitiv vital în confinarea magnetică a plasmei de fuziune. Cea mai simplă capcană magentică se obține folosind două spire de curent apropiate, prin care circulă curenți electrici în același sens (vezi figura \ref{sticla}).
 
 \begin{figure}[H]
 \centering
@@ -279,6 +275,8 @@ Oglinzile magnetice au o puternică întrebuințare în fizica plasmei prin fapt
 }
 
 {\section{Montajul experimental}
+
+Elementul principal din montajul experimental (vezi \ref{figs}) este un electromagnet ce curbează traiectoria radiațiilor $\beta$ emise de o sursă radioacativă. Intensitatea câmpului magnetic creat de electromagnet poate fi controlată prin modificarea intensitații curentului prin electromagnet  din butonul de la sursa de tensiune. Numaratoare se fa efeta cu un detector Geiger–Müller.
 
 \begin{figure}[H]
 \centering
@@ -299,7 +297,7 @@ Pasul 4: Se setează ceasul număratorului la $t= 60s$ și se inregistrează num
 
 Pasul 5: Se calculează viteza de numărare cu formula $n'=\frac{N}{t}$ [imp/s] și separat se scade viteza de numărare a fondului $n=n'-f$.
 
-Pasul 6: Se repetă măsuratoriile pentru restul valorilor intensitații curentului prin bobină.
+Pasul 6: Se repetă măsuratorile pentru restul valorilor intensitații curentului prin bobină.
 
 Pasul 7: Se cuplează borna pozitivă a sursei de alimentare la borna $\beta^+$ a bobinei.
 
@@ -311,9 +309,11 @@ Pasul 8: Se parcurg aceleași măsuratori ca și în cazul anterior, iar rezulta
 
 După parcurgerea proceduriilor descrise in sectiunea anterioara au rezultat tabelele \ref{tab1} \ref{tab2} si figuriile \ref{ppp} \ref{ppm}.
 
-Privind acum atat la tebelul  \ref{tab1} cat si la figura \ref{ppp} observam ca exista o valoare a campului magnetic pentru care numarul de impulsuri inregistrate este maxim. Aceasta valaore corespunde cu marimea ideala a campului magnetic ce curbeaza fascicului de radiatii beta pe detctor. O valoare mai mare sau mai mica a campului magnetic va devia a fasciculului de radiatii bete inainte sau dupa detector, acest lucru atrage de la sine valri mai mici ale numarului de impulsuri inregistrate.
+Pentru radaiția de fond s-au înregistrat 150 de impusluri în 600 de secunde. Deci $f=0.25 imp/s$.
 
-Ne concentram atentia pe tebelul  \ref{tab2} cat si la figura \ref{ppm}  observam ca valoriile numarului de impulsuri nu mai sunt dependente de valaorea intensitatii campului magnetic. Acest lucru se intampla deoarece am shcimabt bornele sursei deci si sensul campului magnetic. Deci acesta va curba traiectoria radiatiilro beta in sensul opus detectorului, astef vom inregistra doar radiatia de fond. In realitate se intregistreaza un numar de impulsuri foarte apropiat de radiatia de fond deoarece unele particuel incarcate tot reusesc sa ajunga pe detector deoarece au o energie ridicata si nu pot fi deviate in timpo de campul magentic. Acest lucru este evident in speical pentru valor mici ale campului magnetic.
+Privind acum atat la tabelul \ref{tab1} cât și la figura \ref{ppp} observăm că există o valoare a câmpului magnetic pentru care numarul de impulsuri înregistrate este maxim. Această valoare corespunde cu mărimea ideala a câmpului magnetic ce curbează fascicului de radiatii beta pe detctor. O valoare mai mare sau mai mica a câmpului magnetic va produce o deviație a fasciculului de radiații betă înainte sau după detector, acest lucru atrage de la sine valori mai mici ale numarului de impulsuri înregistrate.
+
+Ne concentrăm atenția pe tabelul \ref{tab2} cât și la figura \ref{ppm} observăm că valorile numărului de impulsuri nu mai sunt dependente de valaorea intensitații câmpului magnetic. Acest lucru se întâmpla deoarece am shimbat bornele sursei deci și sensul câmpului magnetic. Deci acesta va curba traiectoria radiațiilor beta în sensul opus detectorului, astfel vom înregistra doar radiația de fond. În realitate se întregistrează un numar de impulsuri foarte apropiat de radiația de fond deoarece unele particule încărcate tot reușesc să ajungă pe detector deoarece au o energie ridicată și nu pot fi deviate în timp de câmpul magentic. Acest lucru este evident în special pentru valori mici ale câmpului magnetic.
 
 \begin{table}[H]
 \begin{center}
@@ -415,39 +415,36 @@ Ne concentram atentia pe tebelul  \ref{tab2} cat si la figura \ref{ppm}  observa
 \begin{figure}[H]
 \centering
   \includegraphics[width=0.9\textwidth]{pm.png}
-  \caption{\label{ppm}Graficul distributiei dupa energie pentru sursa de ${}^{90}Sr$ atunci când borna pozitivă a sursei este conectată la borna $\beta^-$ a sursei.}
+  \caption{\label{ppm}Graficul distribuției după energie pentru sursa de ${}^{90}Sr$ atunci când borna pozitivă a sursei este conectată la borna $\beta^-$ a sursei.}
 \end{figure}
 
 \begin{figure}[H]
 \centering
   \includegraphics[width=0.9\textwidth]{pp.png}
-  \caption{\label{ppp}Graficul distributiei dupa energie pentru sursa de ${}^{90}Sr$ atunci când borna pozitivă a sursei este conectată la borna $\beta^+$ a sursei.}
+  \caption{\label{ppp}Graficul distribuției după energie pentru sursa de ${}^{90}Sr$ atunci când borna pozitivă a sursei este conectată la borna $\beta^+$ a sursei.}
 \end{figure}
 
-The stronger the magnetic field, the greater the deflection. If the field direction is
-changed, the deflection also occurs in the opposite direction.
-The beta particles have different energy values because they are deflected to different
-degrees.
 }
 
 {\section{Controlul traiectoriei particulelor încărcate}
-Montajul experimental descris în secțiunea 3 poate fi utilizat pentru controlul traiectoriei particulelor încărcate. Vom arăta acest lucru prin utilizarea simulatorului []
+Montajul experimental descris în secțiunea 3 poate fi utilizat pentru controlul traiectoriei particulelor încărcate. Vom arăta acest lucru prin utilizarea unui simulator.
 
-Considerăd o particulă cu masa, sarcină si viteză inițială constantă, putem controla traiectoria acesteia prin trecerea acesteia prin-tun câmp magnetic
+Considerăm o particulă cu masa, sarcină si viteză inițială constantă, putem controla traiectoria acesteia prin trecerea acesteia print-un câmp magnetic.
+În urma utilizarii simulatorului (vezi \ref{FIGU}) observăm faptul că un câmp magnetic mai puternic va devia mai mult traiectoria unei particule încarcate i daca directia campului magnetic se schimba, atunci si deviatia are loc in sensul opus.
 
 \begin{figure}[H]
 \centering
 \begin{subfigure}{.95\textwidth}
     \centering
     \includegraphics[width=.95\linewidth]{tesl}  
-    \caption{Grupa 1 ($20cm$)}
+    \caption{}
     \label{SUBFIGURE LABEL 1}
 \end{subfigure}
-\caption{Dependența traiectoriei unei particule încărcate de intensitatea câmpului magnetic prin care trece}
-\label{FIGURE LABEL}
+\caption{Dependența traiectoriei unei particule încărcate de intensitatea câmpului magnetic prin care trece.}
+\label{FIGU}
 \end{figure}
 
-In urma utilizarii simulatorului realizam faptul ca un camp magnetic mai puternic va devia mai mult traiectoria unei particule incarcate si daca directia campului magnetic se schimba, atunci si deviatia are loc in sensul opus.
+In urma utilizarii simulatorului realizam faptul ca un camp magnetic mai puternic va devia mai mult traiectoria unei particule incarcate și dacă direcția câmpului magnetic se schimbaă, atunci și deviația are loc în sensul opus.
 
 }
 
