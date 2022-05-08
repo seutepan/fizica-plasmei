@@ -182,231 +182,100 @@
 
 {\section{Scopul lucrării}
 %
-1.  Analiza mișcării unei particule încărcate in funcție de sarcina ei într-un câmp magnetic omogen.\\
-2.  Utilizarea unui câmp magnetic pentru controlul unei particule încărcate în aproximația 3D.\\
-3.  Evidențierea influenței distribuției după energie asupra traiectoriei de mișcare.\\
-4.  Utilizarea montajului experimental pentru realizarea unei proceduri de control a traiectoriei particulelor încărcate.
+1.	Prezentarea unei metode de punere în evidență a generării de sarcini electrice în aer cu ajutorul radiațiilor X.\\
+2.  Analiza influenței parametriilor de funcționare a sursei de raze X asupra.
 }
 %
 {\section{Principiul fizic}
-{\subsection{Analiza mișării unei particule încărcate în funcție de sarcina ei intr-un câmp magnetic}
-În aproximația 2D, într-un câmp magnetic omogen, o particulă incărcata se va mișca după o orbită circulară fixă. Astfel, forța Lorentz și forța centrifugă sunt in echilibru
-\begin{eqnarray}
-q v B=\frac{m v^2}{r}\,.
-\end{eqnarray}
-Deci, o particulă încărcată se va mișca pe traiectoria unui cerc de rază
-\begin{eqnarray}
-r=\frac{m v}{qB}\,,
-\end{eqnarray}
-unde $m$, $v$, $q$ sunt masa, viteza respectiv sarcina particulei, iar B este intensitatea câmpului magnetic.
+Radiațiile X se detectează pe baza efectelor fizice pe care le produc. De exemplu, înegrirea filmelor fotografice, ionizarea aerului și a alotor gaze, producerea efectului fotoelectric la suprafața metalelor sau producerea efectului de luminiscentă în unele substanțe fluorescente.
 
-În figura \ref{mis1} avem două cazuri de mișcare a unei particule încărcate în câmp magentic în funcție de sarcina acesteia. Obserăm că, pentru două sarcini egale dar de semn opus, mișcarea particulei descrie același cerc, dar sensul de parcurgere al acestuia este diferit. Sensul se poate afla utilizând regula mâinii drepte.
+În contextul acestei lucrări, generearea de sracini electrice în aer cu ajutorul radiațiilor X poate fi pusă în evidență prin măsurarea curentului de ionizare dintr-un condensator plan cu aer.
 
-\begin{figure}[H]
-\centering
-\begin{subfigure}{.45\textwidth}
-    \centering
-    \includegraphics[width=.95\linewidth]{qpozitiv}  
-    \caption{Sarcină pozitivă.}
-    \label{Sarcină pozitivă}
-\end{subfigure}
-\begin{subfigure}{.45\textwidth}
-    \centering
-    \includegraphics[width=.95\linewidth]{qnegativ}  
-    \caption{Sarcină negativă.}
-    \label{Sarcină negativă}
-\end{subfigure}
-\caption{Mișcarea într-un câmp magnetic omogen, ce iese din foaie, a două particule de sarcină egala și semn contrar.}
-\label{mis1}
-\end{figure}
-}
-
-Observăm și faptul că raza cercului pe care se mișcă particula încărcată este invers proporțională cu sarcina particulei. În figura \ref{mis2} se observă reducerea la jumâtate a razei cercului atunci când se dubleaza sarcina. 
-
-\begin{figure}[H]
-\centering
-\begin{subfigure}{.45\textwidth}
-    \centering
-    \includegraphics[width=.95\linewidth]{q5}  
-    \caption{Mișcarea pentru o particulă de sarcină q.}
-    \label{Sarcină pozitivă}
-\end{subfigure}
-\begin{subfigure}{.45\textwidth}
-    \centering
-    \includegraphics[width=.95\linewidth]{q10}  
-    \caption{Mișcarea pentru o particulă de sarcină 2q.}
-    \label{Sarcină negativă}
-\end{subfigure}
-\caption{Mișcarea într-un câmp magnetic omogen, ce iese din foaie, a două particule de sarcină diferită.}
-\label{mis2}
-\end{figure}
-
-\subsection{Utilizarea unui câmp magnetic pentru controlul unei particule încărcate în aproximația 3D}
-{
-Dacă, în schimb, particula pătrunde sub un unghi oarecare în câmp magnetic omogen, atunci 
-viteza particulei poate fi descompusă după două direcţii, una paralelă cu linia de câmp magnetic şi 
-alta perpendiculară pe linia de câmp. Componenta perpendiculară dă o forţa Lorentz nenulă ce va 
-determina o mişcare circulară cu o anume perioada şi de o anumită rază, în timp ce componenta 
-paralelă a vitezei va da o mişcare de translaţie în jurul liniei de câmp. Ca urmare, particula descrie o 
-mişcare elicoidală cu un pas ce depinde de componenta paralelă a vitezei şi de perioada mişcării 
-circulare
-În aproximația 3D mișcarea unei particule încăracate are o formă mai complexă, aceasta urmează o traiectorie helicoidală, ca cea reprezentată în figura \ref{helic}.
-
-\begin{figure}[H]
-\centering
-  \includegraphics[width=0.9\textwidth]{helic}
-  \caption{\label{helic}Traiectoria helicoidală a unei particule încarcate in aproxiamția 3D.}
-\end{figure}
-
-Putem astfel descrie o configurație de câmp magnetic de poate fi utilizat pentru controlul practic al unei particule încărcate. În fizica plasmei o astfel de configurație este un câmp ce permite fenomenul de refelxie magnetică. Acest fenomen este datorat faptului că forța care acționează asupra unei particule încărcate electric este orientată întotdeauna spre câmpuri mai slabe. Asta înseamnă că, în mișcarea sa, o particulă poate întalni un camp magnetic care să o oprească și să determine întoarcerea acesteia din sensul în care a venit. Acest fenomen, de reflexie magnetică, permite creearea de oglinzi magnetice (vezi figura \ref{oglinda})
-
-\begin{figure}[H]
-\centering
-  \includegraphics[width=0.9\textwidth]{oglinda}
-  \caption{\label{oglinda}miscarea unei particule incarcate intr-o oglinda magnetica.}
-\end{figure}
-
-Oglinzile magnetice au o puternică întrebuințare în fizica plasmei prin faptul că sunt folosite în realizarea capcanelor magnetice, un dispozitiv vital în confinarea magnetică a plasmei de fuziune. Cea mai simplă capcană magentică se obține folsind două spire de curent apropiate, prin care circulă curenți electrici în același sens (vezi figura \ref{sticla}).
-
-\begin{figure}[H]
-\centering
-  \includegraphics[width=0.9\textwidth]{sticla}
-  \caption{\label{sticla}Ansamblu de spire de curent ce formează o capcană magentică.}
-\end{figure}
-}
-
-
+Când se aplica o tensiune $U_c$ pe placiile condensatorului, perechiile electron-ion generate sub acțiunea radiatiilor X de energie $\hbar \omega$ sunt colectați pe plăcile condensatorului. Curentul generat în acest mod corespunde curentului de ionizare $I_c$
+Cu cât tensiunea $U_c$ crește, cu atât și numărul de purtători de sarcină colectați pe plăcile condensatorului. Dupa un anumit punct creșterea tensiunii $U_c$ nu mai are ca efect creșterea curentului $I_c$ deoarece acesta a ajuns la saturație, fiind capturati toți purtătorii de sarcină formați de radiația incidentă pe unitatea de timp.
 }
 
 {\section{Montajul experimental}
-
-\begin{figure}[H]
-\centering
-  \includegraphics[width=0.9\textwidth]{montaj.png}
-  \caption{\label{figs}Montajul experimental.}
-\end{figure}
 }
 
 
 {\section{Modul de lucru}
-Pasul 1: Se înregistrează numărul e impulsuri (F) pentru radiația de fond timp de 10 minute ($t_f=10 min =600s$) și se calculează viteza de numărare a fondului cu formula $f=\frac{F}{t_f}$ [imp/s].
 
-Pasul 2: Se introduce sursa de ${}^{90}Sr$ în suportul circular și se cuplează borna pozitivă a sursei de alimentare la borna $\beta^-$ a bobinei.
-
-Pasul 3: Se setează intensitatea curentului brin bobină la prima valoare din tabelul \ref{tab1}.
-
-Pasul 4: Se setează ceasul număratorului la $t= 60s$ și se inregistrează numărul de impulsuri [N], rezultatul se trece în tabelul \ref{tab1}.
-
-Pasul 5: Se calculează viteza de numărare cu formula $n'=\frac{N}{t}$ [imp/s] și separat se scade viteza de numărare a fondului $n=n'-f$.
-
-Pasul 6: Se repetă măsuratoriile pentru restul valorilor intensitații curentului prin bobină.
-
-Pasul 7: Se cuplează borna pozitivă a sursei de alimentare la borna $\beta^+$ a bobinei.
-
-Pasul 8: Se parcurg aceleași măsuratori ca și în cazul anterior, iar rezultatele se trec în tabelul \ref{tab2}.
- 
 }
 
 {\section{Rezultate}
 
-După parcurgerea proceduriilor descrise in sectiunea anterioara au rezultat tabelele \ref{tab1} \ref{tab2} si figuriile \ref{ppp} \ref{ppm}.
 
-Privind acum atat la tebelul  \ref{tab1} cat si la figura \ref{ppp} observam ca exista o valoare a campului magnetic pentru care numarul de impulsuri inregistrate este maxim. Aceasta valaore corespunde cu marimea ideala a campului magnetic ce curbeaza fascicului de radiatii beta pe detctor. O valoare mai mare sau mai mica a campului magnetic va devia a fasciculului de radiatii bete inainte sau dupa detector, acest lucru atrage de la sine valri mai mici ale numarului de impulsuri inregistrate.
-
-Ne concentram atentia pe tebelul  \ref{tab2} cat si la figura \ref{ppm}  observam ca valoriile numarului de impulsuri nu mai sunt dependente de valaorea intensitatii campului magnetic. Acest lucru se intampla deoarece am shcimabt bornele sursei deci si sensul campului magnetic. Deci acesta va curba traiectoria radiatiilro beta in sensul opus detectorului, astef vom inregistra doar radiatia de fond. In realitate se intregistreaza un numar de impulsuri foarte apropiat de radiatia de fond deoarece unele particuel incarcate tot reusesc sa ajunga pe detector deoarece au o energie ridicata si nu pot fi deviate in timpo de campul magentic. Acest lucru este evident in speical pentru valor mici ale campului magnetic.
 
 \begin{table}[H]
 \begin{center}
-\begin{tabular}{|c|c|c|c|c|c|c|} 
+\begin{tabular}{|c|c|c|c|} 
  \hline
- Nr. crt & I [A] & b[mT]  &E[keV] & N(imp) &  n' [Imp/s] & n [imp/s] \\ 
+ Nr. crt & I [mA] & UV]  &$I_c$[nA]  \\ 
  \hline\hline
-1 & 0 & 4.4 & 5.47 &  155 & 2.58 &2.33 \\
+1 & 0 & 0 & 0  \\
  \hline
- 2 & 0.1 & 15.4 & 21.56 &  258 & 4.3 & 4.05  \\
+ 2 & 0.1 & 0.61 &  0.61  \\
  \hline
- 3 & 0.2 &  24.5 & 47.34 & 336 & 5.6 & 5.35 \\
+ 3 & 0.2 &  1.15 &  1.15  \\
  \hline
- 4 & 0.3 &34.7 & 81.55 &534& 8.9&8.65 \\
+ 4 & 0.3 & 1.57 &1.57 \\
  \hline
- 5 & 0.4 & 45.7 & 122.83 &789 &13.15 & 12.9\\
+ 5 & 0.4 & 1.96 & 1.96  \\
  \hline
- 6 & 0.5 & 56.1 & 169.89 &1008 & 16.8 &16.55 \\
+ 6 & 0.5 & 2.20 & 2.20  \\
  \hline
- 7 & 0.6 & 65.8 & 221.62 &1140 & 19 &18.75 \\
+ 7 & 0.6 & 2.64 & 2.64  \\
  \hline
- 8 & 0.7 & 78 & 277.11 & 1267 & 21.11 &20.86 \\
+ 8 & 0.7 & 2.96 & 2.96  \\
  \hline
- 9 & 0.8 & 87 & 335.61 & 1296 & 21.6 &21.35 \\
+ 9 & 0.8 & 3.20 & 3.20 \\
  \hline
- 10 & 0.9 & 97.4 & 396.53 & 1278 & 21.3 &21.05 \\
+ 10 & 0.9 & 3.71 & 3.71  \\
  \hline
- 11 & 1.0 & 107.4 & 459.43 &1076 & 17.93 &17.68 \\
- \hline
- 12 & 1.1 & 120.2 & 523.94 &1004 & 16.73 &16.48 \\
- \hline
- 13 & 1.2 & 128.5 & 589.79 &894 & 14.9 &12.65 \\
- \hline
- 14 & 1.3 & 140 & 656.74 &735 & 12.25 &12 \\
- \hline
- 15 & 1.4 & 149 & 724.61 &618 & 10.3 &10.05 \\
- \hline
- 16 & 1.5 & 159.3 & 793.27 &477 & 7.95 &7.7 \\
- \hline
- 17 & 1.6 & 168.1 & 861.58 &412 & 6.86 &6.61 \\
- \hline
- 18 & 1.7 & 174.7 & 932.47 &308 & 5.13 &4.88 \\
+ 11 & 1.0 & 4.06 & 4.06  \\
  \hline
 \end{tabular}
-\caption{\label{tab1}Datele colectate pentru sursa de ${}^{90}Sr$ atunci când borna pozitivă a sursei este conectată la borna negativă a sursei.}
+\caption{\label{tab2}Curentul de ionizare de saturatie $I_c$ ca funcție de curentul de emisie I.}
 \end{center}
 \end{table}
 
 
 \begin{table}[H]
 \begin{center}
-\begin{tabular}{|c|c|c|c|c|c|c|} 
+\begin{tabular}{|c|c|c|c|} 
  \hline
- Nr. crt & I [A] & b[mT]  &E[keV] & N[imp] &  n' [Imp/s] & n [imp/s] \\ 
+ Nr. crt & I [mA] & UV]  &$I_c$[nA]  \\ 
  \hline\hline
-1 & 0 & 4.4 & 5.47 &  82 & 1.36 &1.11 \\
+1 & 5 & 0.0015 &  0.0015  \\
  \hline
- 2 & 0.1 & 15.4 & 21.56 &  81 & 1.35 & 1.1  \\
+ 2 & 7.5 & 0.0031 &0.0031  \\
  \hline
- 3 & 0.2 &  24.5 & 47.34 & 70 & 1.16 & 0.91 \\
+ 3 & 10 &  0.0041 & 0.0041  \\
  \hline
- 4 & 0.3 &34.7 & 81.55 &57& 0.95&0.7 \\
+ 4 & 12.5 &0.015 & 0.015 \\
  \hline
- 5 & 0.4 & 45.7 & 122.83 &43 &0.71 & 0.46\\
+ 5 & 15& 0.13 & 0.13\\
  \hline
- 6 & 0.5 & 56.1 & 169.89 &38 & 0.63 &0.38 \\
+ 6 & 17.5 & 0.37 &  0.37  \\
  \hline
- 7 & 0.6 & 65.8 & 221.62 &31 & 0.51 &0.26 \\
+ 7 & 20 & 0.66 & 0.66  \\
  \hline
- 8 & 0.7 & 78 & 277.11 & 34 & 0.56 &0.31 \\
+ 8 & 22.5 & 1.01 & 1.01 \\
  \hline
- 9 & 0.8 & 87 & 335.61 & 34 & 0.56 &0.31 \\
+ 9 & 25 & 1.46 & 1.46 \\
  \hline
- 10 & 0.9 & 97.4 & 396.53 & 24 & 0.4 &0.15 \\
+ 10 & 27.5 & 2.10& 2.10  \\
  \hline
- 11 & 1.0 & 107.4 & 459.43 &30 & 0.5 &0.25 \\
+ 10 & 30 & 2.65 &  2.65  \\
  \hline
- 12 & 1.1 & 120.2 & 523.94 &36 & 0.6 &0.35 \\
+ 10 & 32.5 & 3.30 & 3.30  \\
  \hline
- 13 & 1.2 & 128.5 & 589.79 &19 & 0.31 &0.06 \\
+ 10 & 35 & 3.97 & 3.97 \\
  \hline
- 14 & 1.3 & 140 & 656.74 &20 & 0.33 &0.08\\
- \hline
- 15 & 1.4 & 149 & 724.61 &15 & 0.25 &0 \\
- \hline
- 16 & 1.5 & 159.3 & 793.27 &20 & 0.33 &0.08 \\
- \hline
- 17 & 1.6 & 168.1 & 861.58 &16 & 0.26 &0.01 \\
- \hline
- 18 & 1.7 & 174.7 & 932.47 &15 & 0.25 &0 \\
- \hline
+
 \end{tabular}
-\caption{\label{tab2}Datele colectate pentru sursa de ${}^{90}Sr$ atunci când borna pozitivă a sursei este conectată la borna pozitivă a sursei.}
+\caption{\label{tab2}Curentul de ionizare de saturatie $I_c$ ca funcție tensiunea tubului U.}
 \end{center}
 \end{table}
 
@@ -414,42 +283,18 @@ Ne concentram atentia pe tebelul  \ref{tab2} cat si la figura \ref{ppm}  observa
 
 \begin{figure}[H]
 \centering
-  \includegraphics[width=0.9\textwidth]{pm.png}
-  \caption{\label{ppm}Graficul distributiei dupa energie pentru sursa de ${}^{90}Sr$ atunci când borna pozitivă a sursei este conectată la borna $\beta^-$ a sursei.}
+  \includegraphics[width=0.9\textwidth]{b.png}
+  \caption{\label{b}Curentul de ionizare de saturatie $I_c$ ca funcție de curentul de emisie I.}
 \end{figure}
-
 \begin{figure}[H]
 \centering
-  \includegraphics[width=0.9\textwidth]{pp.png}
-  \caption{\label{ppp}Graficul distributiei dupa energie pentru sursa de ${}^{90}Sr$ atunci când borna pozitivă a sursei este conectată la borna $\beta^+$ a sursei.}
+  \includegraphics[width=0.9\textwidth]{c.png}
+  \caption{\label{c}Curentul de ionizare de saturatie $I_c$ ca funcție tensiunea tubului U.}
 \end{figure}
 
-The stronger the magnetic field, the greater the deflection. If the field direction is
-changed, the deflection also occurs in the opposite direction.
-The beta particles have different energy values because they are deflected to different
-degrees.
 }
 
-{\section{Controlul traiectoriei particulelor încărcate}
-Montajul experimental descris în secțiunea 3 poate fi utilizat pentru controlul traiectoriei particulelor încărcate. Vom arăta acest lucru prin utilizarea simulatorului []
 
-Considerăd o particulă cu masa, sarcină si viteză inițială constantă, putem controla traiectoria acesteia prin trecerea acesteia prin-tun câmp magnetic
-
-\begin{figure}[H]
-\centering
-\begin{subfigure}{.95\textwidth}
-    \centering
-    \includegraphics[width=.95\linewidth]{tesl}  
-    \caption{Grupa 1 ($20cm$)}
-    \label{SUBFIGURE LABEL 1}
-\end{subfigure}
-\caption{Dependența traiectoriei unei particule încărcate de intensitatea câmpului magnetic prin care trece}
-\label{FIGURE LABEL}
-\end{figure}
-
-In urma utilizarii simulatorului realizam faptul ca un camp magnetic mai puternic va devia mai mult traiectoria unei particule incarcate si daca directia campului magnetic se schimba, atunci si deviatia are loc in sensul opus.
-
-}
 
 
 
