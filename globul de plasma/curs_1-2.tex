@@ -182,15 +182,12 @@
 
 {\section{Scopul lucrării}
 %
-1.Prezentarea unei metode de punere în evidență a generării de sarcini electrice în aer cu ajutorul radiațiilor X.\\
-2. Analiza influenței parametriilor de funcționare a sursei de raze X asupra numărului de sarcini electrice create.
+1.Documentarea și înțelegera modului de funcționare a globului de plasmă.\\
+2. Descrierea principalelor componente ale acestuia ce îi asigură funcționarea.\\
+3. Măsurarea și analiza parametrilor de funcționare ai sistemului.
 }
 %
 {\section{Principiul fizic}
-Radiațiile X se detectează pe baza efectelor fizice pe care le produc. De exemplu, înegrirea filmelor fotografice, ionizarea aerului și a altor gaze, producerea efectului fotoelectric la suprafața metalelor sau producerea efectului de luminiscentă în unele substanțe fluorescente.
-În contextul acestei lucrări, generearea de sarcini electrice în aer cu ajutorul radiațiilor X poate fi pusă în evidență prin măsurarea curentului de ionizare dintr-un condensator plan cu aer.
-Când se aplică o tensiune $U_c$ pe placiile condensatorului, perechiile electron-ion generate sub acțiunea radiațiilor X de energie $\hbar \omega$ sunt colectate pe plăcile condensatorului (vezi figura \ref{princ}). Curentul generat în acest mod corespunde curentului de ionizare $I_c$.
-Cu cât tensiunea $U_c$ crește, cu atât și numărul de purtători de sarcină colectați pe plăcile condensatorului crește. După un anumit punct creșterea tensiunii $U_c$ nu mai are ca efect creșterea curentului $I_c$ deoarece acesta a ajuns la saturație, fiind capturați toți purtătorii de sarcină formați de radiația incidentă pe unitatea de timp.
 \begin{figure}[H]
 \centering
   \includegraphics[width=0.9\textwidth]{princip}
@@ -200,42 +197,14 @@ Cu cât tensiunea $U_c$ crește, cu atât și numărul de purtători de sarcină
 }
 
 {\section{Montajul experimental}
-Radiațiile X ies prin orificiul 1, mai apoi trec prin fanta de colimare 2 și intră între armărutiile condensatorului cu aer 3,4. Radiația este oprită în drumul său de către capacul cutiei 5 care are rol de protecție. Curentul de ionizare cules trece printr-o rezistență de $1G\ohm$, iar tensiunea rezultantă este amplificată și masurată de voltmetrul 8. Sursa 7 produce atât tensiunea pentru alimentarea amplificatorului cât și tensiunea de pe placile condensatorului care este masurată cu voltmetrul 9.
-
-\begin{figure}[H]
-\centering
-  \includegraphics[width=0.9\textwidth]{montaj}
-  \caption{\label{princ}Montajul experimental.}
-\end{figure}
 }
 
 
 {\section{Modul de lucru}
 
-Pentru măsurarea curentului de ionizare $I_c$ ca funcție de curentul de emisie $I$ se parcurg pașii:
-
-Pasul 1: Se setează tensiunea tubului la valoarea de $35kV$.\\
-Pasul 2: Se setează tensiunea condensatorului la o valoare mai mare de $140V$, astfel încât sa se obtină saturația curentului de ionizare $I_c$.\\
-Pasul 3: Se marește curentul de emisie al tubului $I$ în trepte de $0.1 mA$ începand de la $0 mA $ pană la $1 mA$ și se determină curentul de ionizare corespunzător pentru fiecare valoare.\\
-Pasul 4: Rezultatele obținute se trec într-un tabel și se reprezintă grafic dependența curentului de saturație de intensitatea curentului de emisie.
-
-Pentru măsurarea curentului de ionizare $I_c$ ca funcție de tensiunea tubului $I$ se parcurg pașii:
-
-Pasul 1: Se setează curentul de emisie al tubului la $I=1 mA$.\\
-Pasul 2: Se setează tensiunea condensatorului la $140V$.\\
-Pasul 3: Se marește tensiunea $U$ în trepte de $2.5 kV$ începand de la $5kV$ pană la $35kV$.\\
-Pasul 4: Rezultatele obținute se trec într-un tabel și se reprezintă grafic dependența curentului de saturație de tensiunea tubului.
 }
 
 {\section{Rezultate}
-Pentru măsurarea curentului de ionizare ca funcție de curentul de emisie s-a ales tensiunea condensatorului de $140V$.
-În urma masurătoriilor au rezultat tabelele \ref{tab1} \ref{tab2} și figuriile \ref{b} \ref{c}.
-Urmărind figura \ref{b}, observăm că dependența intensitații curentului de ionizare de saturație $I_c$ față de curentul de emisie este una liniară. Adică pentru tensiunea maxima a tubului de emisie de raze X ($U=35kV$) intensitatea curentului de saturație este proportională cu intensitatea curentului de emise deci și a numărului de sarcini electrice create. Putem astfel trage concluzia că la tensiunea constantă de $U=35kV$ a sursei de radiații X numărul de sarcini electrice crește direct proporțional cu intensitatea curentului prin sursa de raze X.
-
-Privind acum la \ref{b}, observăm că dependența intensității curentului de ionizare de saturație $I_c$ față de tensiunea tubului este una exponențială. Adică pentru intensitatea maximă a curentului prin tubul de emisie de raze X ($I=1mA$), intensitatea curentului crește exponențial cu tensiunea sursei de radiații X.
-Putem astfel trage concluzia că la intensitatea constantă de $I=1mA$ a sursei de radiații X, numărul de sarcini electrice crește exponential cu tensiunea sursei de radiații X.
-
-
 
 \begin{table}[H]
 \begin{center}
@@ -270,58 +239,6 @@ Putem astfel trage concluzia că la intensitatea constantă de $I=1mA$ a sursei 
 \end{center}
 \end{table}
 
-
-\begin{table}[H]
-\begin{center}
-\begin{tabular}{|c|c|c|c|} 
- \hline
- Nr. crt & U [kV] & U[V]  &$I_c$[nA]  \\ 
- \hline\hline
-1 & 5 & 0.0015 &  0.0015  \\
- \hline
- 2 & 7.5 & 0.0031 &0.0031  \\
- \hline
- 3 & 10 &  0.0041 & 0.0041  \\
- \hline
- 4 & 12.5 &0.015 & 0.015 \\
- \hline
- 5 & 15& 0.13 & 0.13\\
- \hline
- 6 & 17.5 & 0.37 &  0.37  \\
- \hline
- 7 & 20 & 0.66 & 0.66  \\
- \hline
- 8 & 22.5 & 1.01 & 1.01 \\
- \hline
- 9 & 25 & 1.46 & 1.46 \\
- \hline
- 10 & 27.5 & 2.10& 2.10  \\
- \hline
- 10 & 30 & 2.65 &  2.65  \\
- \hline
- 10 & 32.5 & 3.30 & 3.30  \\
- \hline
- 10 & 35 & 3.97 & 3.97 \\
- \hline
-
-\end{tabular}
-\caption{\label{tab2}Curentul de ionizare de saturație $I_c$ ca funcție tensiunea tubului U.}
-\end{center}
-\end{table}
-
-
-
-\begin{figure}[H]
-\centering
-  \includegraphics[width=0.9\textwidth]{b.png}
-  \caption{\label{b}Curentul de ionizare de saturație $I_c$ ca funcție de curentul de emisie a sursei de radiații X.}
-\end{figure}
-\begin{figure}[H]
-\centering
-  \includegraphics[width=0.9\textwidth]{c.png}
-  \caption{\label{c}Curentul de ionizare de saturație $I_c$ ca funcție tensiunea sursei de radiații X.}
-\end{figure}
-
 }
 
 
@@ -331,7 +248,6 @@ Putem astfel trage concluzia că la intensitatea constantă de $I=1mA$ a sursei 
 
 
 {\section{Concluzii}
-În această lucrarea am prezentat o metodă de punere în evidență a generării de sarcini electrice în aer cu ajutorul radiaților X. Am arătat că numărului de sarcini electrice create depinde linear de intensitatea curentului de emisie a sursei de radiații X și exponențial de tensiunea sursei de radiații X.
 }
 
 \printbibliography
