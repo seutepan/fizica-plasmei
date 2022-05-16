@@ -182,7 +182,7 @@
 
 {\section{Scopul lucrării}
 %
-1.Documentarea și înțelegera modului de funcționare a globului de plasmă.\\
+1. Documentarea și înțelegera modului de funcționare a globului de plasmă.\\
 2. Descrierea principalelor componente ale acestuia ce îi asigură funcționarea.\\
 3. Măsurarea și analiza parametrilor de funcționare ai sistemului.
 }
@@ -190,14 +190,14 @@
 
 
 {\section{Montajul experimental}
-Privint în partea de sus a globului de plasmă , se observă că acesta este alcătuit dintr-o incintă închisă de scticlă, umplută cu un amestec de diverse gaze nobile, cu mar fi argon, xenon, neon și kripton. În centrul gobului de sticlă se găseste un electrod de sticlă cu acoperire interioară de grafit, înăuntul căruia se află un strat de lână de oțel conectată la un curent de înaltă frecventă. Privint acum în partea de jos a globului de plasm-a se obseră placuța metalică ce va fi folosită drept punct de referința pentru masurătoiile ce vor urma. Se observă de asemenea și partea de alimentare electrică a globului de plasmă, acesta poate fi alimentat printr-un cablu USB sau prin introducerea a trei baterii de tip AAA.
+Privind în partea de sus a globului de plasmă , se observă că acesta este alcătuit dintr-o incintă închisă de scticlă, umplută cu un amestec de diverse gaze nobile, cum ar fi argon, xenon, neon și kripton. În centrul gobului de sticlă se găseste un electrod de sticlă cu acoperire interioară de grafit, înăuntul căruia se află un strat de lână de oțel conectată la un curent de înaltă frecventă. Privind acum în partea de jos a globului de plasmă se obseră placuța metalică ce va fi folosită drept punct de referință pentru măsurarea potențialului. Se observă de asemenea și partea de alimentare electrică a globului de plasmă, acesta poate fi alimentat printr-un cablu USB sau prin introducerea a trei baterii de tip AAA.
  
 \begin{figure}[H]
     \centering
     \subfloat[\centering Vedere de sus a globului de plasmă]{{\includegraphics[width=7cm]{gsus} }}%
     \qquad
     \subfloat[\centering Vedere de jos a globului de plasmă]{{\includegraphics[width=7cm]{gjos} }}%
-    \caption{2 Figures side by side}%
+    \caption{Elementele globului de plasmă}%
     \label{fig:example}%
 \end{figure}
 }
@@ -206,8 +206,8 @@ Privint în partea de sus a globului de plasmă , se observă că acesta este al
 {\section{Principiul de funcționare}
 În figura \ref{circ} observăm schematica internă a circuitului ce alimentează electrodul de sticlă. 
 Circuitul funcționează în modul următor: 
-Curentul de alimentare de 5V (care provine de la un cablu USB sau de la trei baterii de tip AAA) 
-Astfel în bucla "secondary" regăsim o tensiune de câțiva mii de volți la o frecvența de până la câțiva zeci de kilohertzi.
+Curentul de alimentare de 5V (care provine de la un cablu USB sau de la trei baterii de tip AAA).
+Capacitorul C are rolul de a atenua tensiunea de intrre. Partea imprejmuită cu rosu reprezintă circuitul ocscilant, frecventă de oscilație a circuitului oscilannt este dictată de frecvența de ocscilație a inductorului numit "Reacție", acesta la randul lui va oscila cu aceesi frecveență proprie a inductorului numit "Primar". Între inductorii "Primar" si "Secundar" are loc fenomenul de inducție electromagnetică. Astfel, în bucla "secondary" regăsim o tensiune de câțiva mii de volți la o frecvența de până la câțiva zeci de kilohertzi.
 
 
 
@@ -219,10 +219,20 @@ Astfel în bucla "secondary" regăsim o tensiune de câțiva mii de volți la o 
 }
 
 {\section{Modul de lucru}
+Pentru a putea descrie potențialul electric pe suprafața globului de plasmă vom marca câteva puncte de test (figura \ref{pct}).
+
+Pentru măsurarea potențialului alegem drept referința placuța metalică de la baza globului de plasmă, asa cum am marcat în figura \ref{fig:example}.
+
+Punctele în care se va măsura potențialul sunt cele din figura \ref{pct}.
+
+Pentru ficare dintre aceste puncte se vor efectua 10 măsuratori. Rezultatatele se mediază si se trec intr-un tabel.
+
+Tinănd cont de reprezentarea 2D a punctelor în care a fost măsurat potentialul (vezi fig\ref{princ}), se realizeaza o reprezentare 2D a potentialului de pe sfera
+
 \begin{figure}[H]
 \centering
   \includegraphics[width=0.9\textwidth]{sfera}
-  \caption{\label{princ}Punctele de pe golbul de plasmă în care a fost măsurat potențialul.}
+  \caption{\label{pct}Punctele de pe golbul de plasmă în care a fost măsurat potențialul.}
 \end{figure}
 
 \begin{figure}[H]
@@ -236,37 +246,41 @@ Astfel în bucla "secondary" regăsim o tensiune de câțiva mii de volți la o 
 
 \begin{table}[H]
 \begin{center}
-\begin{tabular}{|c|c|c|c|} 
+\begin{tabular}{|c|c|} 
  \hline
- Nr. crt & I [mA] & U[V]  &$I_c$[nA]  \\ 
+ Punct pe glob & U[V]   \\ 
  \hline\hline
-1 & 0 & 0 & 0  \\
+sus & 4.22  \\
  \hline
- 2 & 0.1 & 0.61 &  0.61  \\
+ stânga & 5.61 \\
  \hline
- 3 & 0.2 &  1.15 &  1.15  \\
+ dreapta & 6.65  \\
  \hline
- 4 & 0.3 & 1.57 &1.57 \\
+ spate & 10.98  \\
  \hline
- 5 & 0.4 & 1.96 & 1.96  \\
+ față & 4.11  \\
  \hline
- 6 & 0.5 & 2.20 & 2.20  \\
+ jos stânga & 6.77  \\
  \hline
- 7 & 0.6 & 2.64 & 2.64  \\
+ jos dreapta & 9.64  \\
  \hline
- 8 & 0.7 & 2.96 & 2.96  \\
+ jos spate & 15.74   \\
  \hline
- 9 & 0.8 & 3.20 & 3.20 \\
- \hline
- 10 & 0.9 & 3.71 & 3.71  \\
- \hline
- 11 & 1.0 & 4.06 & 4.06  \\
+ jos față & 5.33  \\
  \hline
 \end{tabular}
-\caption{\label{tab1}Curentul de ionizare de saturație $I_c$ ca funcție de curentul de emisie I.}
+\caption{\label{tab1}Media a 10 măsuratori pentru potențialul electric măsurat în diferite puncte ale globului de plasmă.}
 \end{center}
 \end{table}
 
+\begin{figure}[H]
+    \centering
+    \subfloat[\centering Harta 2D a potențialului de glob]{{\includegraphics[width=7cm]{rez1} }}%
+    \qquad
+    \subfloat[\centering Interpolarea valoriilor potențialului de pe glob.]{{\includegraphics[width=7cm]{rez inter} }}%
+    \caption{Reprezentarea 2D a potentialului de pe sferă.}%
+    \label{fig:ex}%
+\end{figure}
 }
 
 
