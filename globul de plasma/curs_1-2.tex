@@ -188,9 +188,12 @@
 }
 %
 
+{\section{Introducere}
+
+}
 
 {\section{Montajul experimental}
-Privind în partea de sus a globului de plasmă , se observă că acesta este alcătuit dintr-o incintă închisă de scticlă, umplută cu un amestec de diverse gaze nobile, cum ar fi argon, xenon, neon și kripton. În centrul gobului de sticlă se găseste un electrod de sticlă cu acoperire interioară de grafit, înăuntul căruia se află un strat de lână de oțel conectată la un curent de înaltă frecventă. Privind acum în partea de jos a globului de plasmă se obseră placuța metalică ce va fi folosită drept punct de referință pentru măsurarea potențialului. Se observă de asemenea și partea de alimentare electrică a globului de plasmă, acesta poate fi alimentat printr-un cablu USB sau prin introducerea a trei baterii de tip AAA.
+Privind în partea de sus a globului de plasmă, se observă că acesta este alcătuit dintr-o incintă închisă de scticlă, umplută cu un amestec de diverse gaze nobile, cum ar fi Argon, Xenon, Neon și Kripton. În centrul globului de sticlă se găseste un electrod de sticlă cu acoperire interioară de grafit, înăuntrul căruia se află un strat de lână de oțel conectată la un curent de înaltă frecvență. Privind acum în partea de jos a globului de plasmă se obseră o placuță metalică ce va fi folosită drept punct de referință pentru măsurarea potențialului. Se observă de asemenea și partea de alimentare electrică a globului de plasmă, acesta poate fi alimentat printr-un cablu USB sau prin introducerea a trei baterii de tip AAA.
  
 \begin{figure}[H]
     \centering
@@ -205,9 +208,8 @@ Privind în partea de sus a globului de plasmă , se observă că acesta este al
 
 {\section{Principiul de funcționare}
 În figura \ref{circ} observăm schematica internă a circuitului ce alimentează electrodul de sticlă. 
-Circuitul funcționează în modul următor: 
-Curentul de alimentare de 5V (care provine de la un cablu USB sau de la trei baterii de tip AAA).
-Capacitorul C are rolul de a atenua tensiunea de intrre. Partea imprejmuită cu rosu reprezintă circuitul ocscilant, frecventă de oscilație a circuitului oscilannt este dictată de frecvența de ocscilație a inductorului numit "Reacție", acesta la randul lui va oscila cu aceesi frecveență proprie a inductorului numit "Primar". Între inductorii "Primar" si "Secundar" are loc fenomenul de inducție electromagnetică. Astfel, în bucla "secondary" regăsim o tensiune de câțiva mii de volți la o frecvența de până la câțiva zeci de kilohertzi.
+Circuitul funcționează în modul următor:
+Tensiunea de alimentare de 5V (care provine de la un cablu USB sau de la trei baterii de tip AAA) este atenuată de capacitorul "C". Partea imprejmuită cu rosu alcatuiește un circuit oscilant, al cărui frecventă de oscilație este dictată de frecvența de ocscilație a inductorului numit "Reacție", acesta, la rândul lui, având aceesi frecveență cu frecvența proprie a inductorului numit "Primar". Între inductorii "Primar" și "Secundar" are loc fenomenul de inducție electromagnetică. Astfel, în bucla "Secundar" regăsim o tensiune de câțiva mii de volți la o frecvența de până la câțiva zeci de kilohertzi.
 
 
 
@@ -219,36 +221,43 @@ Capacitorul C are rolul de a atenua tensiunea de intrre. Partea imprejmuită cu 
 }
 
 {\section{Modul de lucru}
-Pentru a putea descrie potențialul electric pe suprafața globului de plasmă vom marca câteva puncte de test (figura \ref{pct}).
+Pentru a putea descrie potențialul electric de pe suprafața globului de plasmă vom urma proceda astfel:
 
-Pentru măsurarea potențialului alegem drept referința placuța metalică de la baza globului de plasmă, asa cum am marcat în figura \ref{fig:example}.
+Pasul 1: Marcăm câteva puncte de test pe suprafața globului de plasmă(figura \ref{pct}) acestea sunt punctele în care se va măsura potențialul.
 
-Punctele în care se va măsura potențialul sunt cele din figura \ref{pct}.
+Pasul 2: Un braț al multimetrului se va atașa de placuța metalică de la bază globului de plasmă \ref{fig:example}, acesta va fi punctul de referință pentru toate măsuratoriile urmatoare.
 
-Pentru ficare dintre aceste puncte se vor efectua 10 măsuratori. Rezultatatele se mediază si se trec intr-un tabel.
+Pasul 3: Celălalt braț al multimetrului se va pune pe rănd în punctele marcate la pasul 1 și se va citi tensiunea afișată pe multimetru.
 
-Tinănd cont de reprezentarea 2D a punctelor în care a fost măsurat potentialul (vezi fig\ref{princ}), se realizeaza o reprezentare 2D a potentialului de pe sfera
+Pasul 4: Se repetă măsuratoriile de 10 ori, iar media măsurătoriilor se trece intr-un tabel.
+
+Pasul 5: Tinănd cont de reprezentarea 2D a punctelor în care a fost măsurat potențialul (vezi fig\ref{princ}), se realizează o reprezentare 2D a potențialului de pe sferă.
 
 \begin{figure}[H]
 \centering
   \includegraphics[width=0.9\textwidth]{sfera}
-  \caption{\label{pct}Punctele de pe golbul de plasmă în care a fost măsurat potențialul.}
+  \caption{\label{pct}Punctele de pe globul de plasmă în care a fost măsurat potențialul.}
 \end{figure}
 
 \begin{figure}[H]
 \centering
   \includegraphics[width=0.9\textwidth]{proiectie}
-  \caption{\label{princ}reprezentarea 2D a globului de plasmă împreună cu punctele în care a fost măsurat potențialul.}
+  \caption{\label{princ}Reprezentarea 2D a globului de plasmă împreună cu punctele în care a fost măsurat potențialul.}
 \end{figure}
 }
 
 {\section{Rezultate}
 
+În urma măsurătoriilor a rezultat tabelul de valori \ref{tab1} și figura \ref{fig:ex}.
+Se observă că odată cu coborârea pe globul de plasmă difernța de potențial tinde să crească. Ne așteptam la acest femonem deoarece distanța dintre electrodul de sticlă si proba multimetrului crește, deci și diferența de potențial dintre masă și punctul în care se face măsurătoarea crește.
+
+O mențiune importantă este ca în distribuția potențialului pe suprafață sferei de sticlă există o asimetrie datorată poziționării masei aproape de punctul jos față (lucru vizibil in figuriile \ref{pct} si ref{princ}). Astfel la poziționarea brațului de măsură al multimetrului apare fasciculul de plasmă "se scurge" spre masă (vezi figura \ref{scr}).
+ 
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{|c|c|} 
  \hline
- Punct pe glob & U[V]   \\ 
+ Punct de pe glob & U[V]   \\ 
  \hline\hline
 sus & 4.22  \\
  \hline
@@ -275,11 +284,18 @@ sus & 4.22  \\
 
 \begin{figure}[H]
     \centering
-    \subfloat[\centering Harta 2D a potențialului de glob]{{\includegraphics[width=7cm]{rez1} }}%
+    \subfloat[\centering Harta 2D a potențialului de glob.]{{\includegraphics[width=7cm]{rez1} }}%
     \qquad
     \subfloat[\centering Interpolarea valoriilor potențialului de pe glob.]{{\includegraphics[width=7cm]{rez inter} }}%
     \caption{Reprezentarea 2D a potentialului de pe sferă.}%
     \label{fig:ex}%
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+  \includegraphics[width=0.9\textwidth]{scr}
+  \caption{\label{scr}Fenomenul de "scurgere" a fasciculului de plasă spre masă la apropierea brațului de măsura al multimetrului de punctul jos față.}
 \end{figure}
 }
 
@@ -290,6 +306,7 @@ sus & 4.22  \\
 
 
 {\section{Concluzii}
+În urma analizei modului de functionare al unui glob de plasmă am descris modul în care se crează o tensiunea de frecvență și voltaj mare pe electrodul de sticlă dinauntrul globului de plasmă umplut cu un gaz inert. Am aflat distribuția potențialului pe suprafața sferei de sticlă prin interpolarea valoriilor măsurate in diverse puncte. Am arătat faptul că există o asimetrie în distribuția de potential datorată poziționării masei dinauntrul globului de sticlă.
 }
 
 \printbibliography
