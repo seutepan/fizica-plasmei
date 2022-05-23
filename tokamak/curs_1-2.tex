@@ -1,0 +1,576 @@
+\documentclass[12pt]{article}   %12 point font for Times New Roman
+
+
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{mathrsfs}
+\usepackage{revsymb}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage{amssymb}
+\usepackage{nicefrac}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{mathrsfs}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{graphicx}  %for images and plots
+\usepackage[a4paper, left=2.5cm, right=2.5cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{setspace}  %use this package to set linespacing as desired
+\usepackage{times}  %set Times New Roman as the font
+\usepackage[explicit]{titlesec}  %title control and formatting
+
+\usepackage[titles]{tocloft}  %table of contents control and formatting
+\usepackage[backend=bibtex, sorting=none, bibstyle=ieee]{biblatex}  %reference manager
+\usepackage[bookmarks=true, hidelinks]{hyperref}
+\usepackage[page]{appendix}  %for appendices
+\usepackage{rotating}  %for rotated, landscape images
+\usepackage[normalem]{ulem}  %for italicized text
+\usepackage{tabto}
+
+%\newcommand{\sectionbreak}{\clearpage}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath}
+\usepackage{verbatim}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{pdfcomment}
+\usepackage{multirow}
+\usepackage{gensymb}
+\usepackage{array}
+
+\usepackage[export]{adjustbox}
+
+\usepackage[toc]{glossaries}
+
+\makeglossaries
+
+\usepackage{afterpage}
+
+%\newcommand\blankpage{%
+%	\null
+%	\thispagestyle{empty}%
+%	\addtocounter{page}{-1}%
+%	\newpage}
+
+%TABLE STUFF
+%END TABLE STUFF
+
+\DeclareUnicodeCharacter{2212}{-}
+
+\DeclareUnicodeCharacter{223C}{~}
+
+\makeatletter
+\newcommand\footnoteref[1]{\protected@xdef\@thefnmark{\ref{#1}}\@footnotemark}
+\makeatother
+
+\makeatletter
+\newcounter{subsubparagraph}[subparagraph]
+\renewcommand\thesubsubparagraph{%
+	\thesubparagraph.\@arabic\c@subsubparagraph}
+\newcommand\subsubparagraph{%
+	\@startsection{subsubparagraph}    % counter
+	{6}                              % level
+	{\parindent}                     % indent
+	{3.25ex \@plus 1ex \@minus .2ex} % beforeskip
+	{-1em}                           % afterskip
+	{\normalfont\normalsize\bfseries}}
+\newcommand\l@subsubparagraph{\@dottedtocline{6}{10em}{5em}}
+\newcommand{\subsubparagraphmark}[1]{.}
+\makeatother
+
+\usepackage[english]{babel}
+
+
+
+
+\makeatletter
+\providecommand\add@text{}
+\newcommand\tagaddtext[1]{%
+  \gdef\add@text{#1\gdef\add@text{}}}% 
+\renewcommand\tagform@[1]{%
+  \maketag@@@{\llap{\add@text\quad}(\ignorespaces#1\unskip\@@italiccorr)}%
+}
+\makeatother
+
+
+
+\newtheorem{theorem}{Addendum}
+%\newlength{\overwritelength}
+%\newlength{\minimumoverwritelength}
+%\setlength{\minimumoverwritelength}{1cm}
+%\newcommand{\overwrite}[3][red]{%
+%	\settowidth{\overwritelength}{$#2$}%
+%	\ifdim\overwritelength<\minimumoverwritelength%
+%	\setlength{\overwritelength}{\minimumoverwritelength}\fi%
+%	\stackrel
+%	{%
+%		\begin{minipage}{\overwritelength}%
+%			\color{#1}\centering\small #3\\%
+%			\rule{1pt}{9pt}%
+%	\end{minipage}}
+%	{\colorbox{#1!50}{\color{black}$\displaystyle#2$}}}
+
+\newlength{\overwritelength}
+\newlength{\minimumoverwritelength}
+\setlength{\minimumoverwritelength}{1cm}
+\newcommand{\overwrite}[3][red]{%
+	\settowidth{\overwritelength}{$#2$}%
+	\ifdim\overwritelength<\minimumoverwritelength%
+	\setlength{\overwritelength}{\minimumoverwritelength}\fi%
+	\stackrel
+	{%
+		\begin{minipage}{\overwritelength}%
+			\color{#1}\centering\small #3\\%
+			\rule{1pt}{9pt}%
+	\end{minipage}}
+	{\colorbox{#1!50}{\color{black}$\displaystyle#2$}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bibliography
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Add your bibliography file here
+\bibliography{refc1}
+
+
+% prevent certain fields in references from printing in bibliography
+\AtEveryBibitem{\clearfield{issn}}
+\AtEveryBibitem{\clearlist{issn}}
+
+\AtEveryBibitem{\clearfield{language}}
+\AtEveryBibitem{\clearlist{language}}
+
+\AtEveryBibitem{\clearfield{doi}}
+\AtEveryBibitem{\clearlist{doi}}
+
+\AtEveryBibitem{\clearfield{url}}
+\AtEveryBibitem{\clearlist{url}}
+
+\AtEveryBibitem{%
+	\ifentrytype{online}
+	{}
+	{\clearfield{urlyear}\clearfield{urlmonth}\clearfield{urlday}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%paragraph indent
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\parindent}{4em}
+\setlength{\parskip}{1em}
+
+%%%
+%The subsubsub...subsection format
+%%%
+
+
+\title{Virtual Tokamak - joc tematic online}
+\author{Ștefan-Răzvan~Anton\\ Anul 3, Grupa 1334,\\ Facultatea de Științe Aplicate}
+
+\begin{document}
+
+\maketitle
+
+
+
+
+{\section{Scopul lucrării}
+1. Înțelegerea modului de funcționare a unui reactor de fuziune nucleară de tip tokamak prin analiza parametriilor puși la dispoziție de un simulator.\\
+2. Determinarea dependenței energiei electrice produse de densitatea plasmei si de puterea auxiliară introdusă din exterior.\\
+3. Găsirea parametriilor optimi astfel încăt obținem energia electrică maximă posibilă pentru un reactor predefinit (cel de la ITER).
+}
+%
+
+%
+{\section{Principiul fizic}
+Puterea de fuziune este una dintre metodele de generare a energiei ce crează energie electrică folosind căldura produsă de reacțiile de fuziune nucleară. În procesul de fuziune doi nuclei ușori se combină pentru a produce un nucleu mai greu, eliberând energie. Un tip de dispozitiv conceput pentru a valorifica această energie se numeste reactoar de fuziune. În prezent, majoritatea modelelor de reactoare de fuziune propuse utilizează drept combustibil izotopi grei ai hidrogenului, cum ar fi deuteriul și tritiul. Condiția ca un reactor de fuziune să producă energie, deci să aibă loc procesul de fuziune care produce mai multă energie decât energia necesară pentru a întreține procesul de fuziune, se numește criteriu Lawson (vezi ec. \ref{laws}), acesta provine din valoriile de temperatură, presiune și timp de confinare necesare ca fuziunea sa aibă loc.
+\begin{eqnarray}\label{laws}
+P=\eta(P_{fuziune}-P_{conducție}-P_{radiație})\,,
+\end{eqnarray}
+unde $P$ este puterea netă produsă de fuziune, $\eta$ este eficiența cu care puterea de fuziune este capturată, $P_{fuziune}$ este puterea produsă de reacția de fuziune, $P_{conducție}$ este pierderea prin conducție datorită difuziei și convecției plasmei, iar $P_{radiație}$ este pierderea prin radiație.
+
+}
+
+{\section{Montajul experimental}
+Tipul de reactor de fuziune considerat pentru această lucrare este tokamakul, caracteristica principală a acestui reactor este confinarea plasmei în forma de tor (vezi figura \ref{tor}).
+Drept montaj experimental vom utiliza un simulator creat de cei de la IPPEX.
+
+Simulatorul utilizat permite modificarea parametriilor constructivi ai reactorului (vezi figura \ref{param}).
+Prin acțiunea glisorului "Major Radius" se poate modifica distanța de la centrul cercului generator al torului la axă. 
+
+Prin acțiunea glisorului "Minor Radius" se poate modifica raza cercului generator al torului. 
+
+Prin acțiunea glisorului "Elongation " se poate modifica raportul dintre inalțimea plasmei și raza cercului generator al torului.
+
+Prin acțiunea glisorului "Triangularity" se poate modifica un parametru ce descrie cât de triunghiulară este secțiunea plasmei. 
+
+Din butonul "Superconductor Coil Type" se poate selecta tipul de superconductor utilizat pentru a produce câmpul magnetic de confinare. LTS se referă la materiale cu temperatura critică sub 30K și ce permit un câmp magnetic la bobină de până la 12 T, HTS se referă la materiale cu temperatura critica de aproape de 73.15K și ce permit un câmp magnetic la bobină de pâna la 20 T. 
+
+Din butonul "Add a Blanket" se adaugă o pătură groasă de litiu ce se încălzește datorita coliziuniilor cu neutronii energetici emiși de reacția de fuziune.
+
+În continure, am considerat parametrii prestabiliți pentru reactorul de la ITER (parametrii care apar în figura \ref{param}).
+
+\begin{figure}[H]
+\centering
+  \includegraphics[width=0.9\textwidth]{tor}
+  \caption{\label{tor}Forma de tor în care plasma este confinată caracteristică unui tokamak.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+  \includegraphics[width=0.9\textwidth]{param}
+  \caption{\label{param}Fereastra simulatorului în care se pot modifica parametrii constructivi ai reactorului.}
+\end{figure}
+
+După alegerea parametriilor de construcție ai reactorului, simularea începe și ne este prezentat un panou de bord din care putem seta parametrii de control ai simularii.
+
+Prin acțiunea glisorului "Density" se poate modifica densitatea de deuteriu și tritiu din tokamak între limitele $0.1^20-10^20 m^{-3}$.
+
+Prin acțiunea glisorului "Auxiliary Power" se poate modifica cantiatea de energie adăugată plasmei prin injecție de particule neutre sau prin unde electromagnetice între limitele $0-50 MW$.
+
+Prin acțiunea glisorului "Magnetic Filed" se poate modifica valoare câmpului magnetic de confinare între limitele $1-9.68 T$.
+
+Indicatorul "Wall Health" arată gradul de distrugere al incintei de confinare a plasmei.
+
+Indicatorul "Temperature" afișează temperatura curentă a plasmei.
+
+Indicatorul "Electric Power" afișează puterea netă produsă de reactor.
+
+Indicatorul "Score" afișează raportul dintre energia netă produsă de reactor și energia externa necesară pentru a întreține fuziunea. Pentru o valoare de 1 energia produsă de reactor este egală cu energia necesară intreținerii reacției de fuziune.
+
+
+\begin{figure}[H]
+\centering
+  \includegraphics[width=0.9\textwidth]{control}
+  \caption{\label{control}Fereastra simulatorului în care se pot modifica parametrii de control ai simularii.}
+\end{figure}
+}
+
+În simulator există de asemenea o fereastră denumită "View Information". În această fereastă se pot vizualiza anumite mărimi caracteristice procesului de fuziune (vezi figura \ref{caract}). 
+
+Indicatorul "Alpha Power" afișează puterea totală a particulelor alpha generate de procesul de fuziune. Particulele alpha generate iși transferă energia plasmei și ajută la menținerea temperaturii ridicate necesare întreținerii procesului de fuziune.
+
+Indicatorul "Ohmic Power" afișează puterea creată prin efectul Joule în plasmă datorită curentului indus de către câmpul magnetic de confinare în plasmă. Aceasta are o valoare ridicată la temperaturi joase și devine neglijabilă la temperaturi mari.
+
+Indicatorul "Radiation Losses" afișează energia pierdută de plasma prin radiație.
+
+Indicatorul "Conducted Losses" afișează energia pierdută de plasmă datorită difuziei și convecției la marginea plasmei. Aceasta este principala sursa de pierderi în procesul de fuziune.
+
+Indicatorul "Fusion Power" afișează energia totală eliberată de toate reacțiile de fuziune din plasmă.
+
+Indicatorul "Confinment Time" afișează raportul dintre energia stocata în plasmă și energia de intrare în reactor și reprezintă durata necesară energiei să părasească reactorul. Scopul principal al confinarii magnetice este de a extinde această durata cât mai mult.
+
+Indicatorul "Plasma Current" afișează intensitatea curentului electric în plasmă.
+
+Indicatorul "Beta Limit" afișează raportul dintre presiunea plasmei și energia câmpului magnetic de confinare. Dacă raportul dintre aceste este prea mare plasma devine instabilă și atinge pereții incintei de confinare producând deterioararea acestora.
+
+Indicatorul "Density Limit" afișează densitatea maximă pe care o poate avea plasma. După această densitate plasma iși pierde confinarea.
+
+Parametrii "Beta Limit" și "Density Limit" sunt factorii principali care împiedică creșterea densității plasmei și a energiei adăugate plasmei la valori prea mari.
+
+\begin{figure}[H]
+\centering
+  \includegraphics[width=0.9\textwidth]{caract}
+  \caption{\label{caract}Fereastra simulatorului în care se pot vizualiza anumite mărimi caracteristice procesului de fuziune.}
+\end{figure}
+
+{\section{Modul de lucru}
+Deoarece intensitatea câmpului magnetic este factorul limitant în reactoarele de fuziune curente și pentru a putea lucra cu limite constante a densității și energiei adaugate în plasma, in toate simularile se va lucra cu intensitatea câmpului magnetic maximă posibilă în simulator de $9.68 T$.
+
+Pentru a determina dependența puterii electrice produse ca funcție de densitatea plasmei, se va menține constantă energia adăugată în plasmă și se va varia densitatea plasmei până când se atinge maximul impus de catre "Beta Limit" sau "Density Limit".
+
+Pentru a determina dependentă puterii electrice produse ca funție de energia adaugată în plasmă, se va menține densitatea plasmei constantă și se va varia energia adăugată în plasmă până când se atinge maximul impus de catre "Beta Limit" sau "Density Limit" sau se ajunge la valoarea maximă posibilă de $50MW$.
+}
+
+{\section{Rezultate}
+După urmarea procedurii pentru determinarea dependenței puterii electrice produse ca funcție de densitatea plasmei au rezultat tabelele \ref{tab1} \ref{tab2} și figura \ref{dens}.
+
+Observăm faptul ca dependența este una aproximativ lineara, iar puterea adaugată are o influență semnificativă doar la valori mici ale densității. Adaugarea de putere plasmei prin injecție de particule neutre sau prin unde electomagetice permite începerea fuziunii la densități mici ale plasmei.
+
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|c|c|} 
+ \hline
+ Nr. crt &  $n_e [10^{20} m^{-3}]$ & P[MW]   \\ 
+ \hline\hline
+ 1 & 0.1 & 0  \\
+ \hline
+ 2 & 0.2 &  0   \\
+ \hline
+ 3 & 0.3 & 0  \\
+ \hline
+ 4 & 0.4 & 0   \\
+ \hline
+ 5 & 0.5 & 0   \\
+ \hline
+ 6 & 0.6 & 334   \\
+ \hline
+ 7 & 0.69 & 556   \\
+ \hline
+ 8 & 0.79 & 791  \\
+ \hline
+ 9 & 0.89 & 1050   \\
+ \hline
+ 10 & 0.99 & 1339   \\
+ \hline
+ 11 & 1.09 & 1660\\
+ \hline
+\end{tabular}
+\caption{\label{tab1}Dependența puterii electrice produse ca funcție de densitatea plasmei pentru $P_{aux}=0 MW $(puterea adaugată).}
+\end{center}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|c|c|} 
+ \hline
+ Nr. crt &  $n_e [10^{20} m^{-3}]$ & P[MW]   \\ 
+ \hline\hline
+ 1 & 0.1 & 0  \\
+ \hline
+ 2 & 0.2 &  23   \\
+ \hline
+ 3 & 0.3 & 95  \\
+ \hline
+ 4 & 0.4 & 200   \\
+ \hline
+ 5 & 0.5 & 334   \\
+ \hline
+ 6 & 0.6 & 496   \\
+ \hline
+ 7 & 0.69 & 667   \\
+ \hline
+ 8 & 0.79 & 886  \\
+ \hline
+ 9 & 0.89 & 1137   \\
+ \hline
+ 10 & 0.99 & 1421   \\
+ \hline
+ 11 & 1.09 & 1738\\
+ \hline
+\end{tabular}
+\caption{\label{tab2}Dependența puterii electrice produse ca funcție de densitatea plasmei pentru $P_{aux}=50 MW $(puterea adaugată).}
+\end{center}
+\end{table}
+
+\begin{figure}[H]
+\centering
+  \includegraphics[width=0.9\textwidth]{dens.png}
+  \caption{\label{dens}Dependenta puterii electice roduse ca functie de densitatea plasmei pentru diferite valori ale $P_{aux}$(puterea adaugata).}
+\end{figure}
+
+
+După urmarea procedurii pentru determinarea dependenței puterii electrice produse ca funcție de puterea adăugată au rezultat tabelele \ref{tab3} \ref{tab4} \ref{tab5} și figura \ref{dens}.
+Observăm faptul că depenența este una lineară, iar densitatea are o influență semnificativă permamentă. Creșterea densității implică o creștere a puterii electrice produse. Observăm de asemenea faptul că pentru densitatea de $1.19 *10^{20} m^{-3}$ $P){aux}$ puterea adăugată a fost limitată la 41 MW din cauza ca s-a atins limita beta.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|} 
+ \hline
+ Nr. crt &  $P_{aux}[MW]$ & P[MW] &  Nr. crt &  $P_{aux}[MW]$ & P[MW]  \\ 
+ \hline\hline
+ 1 & 1 & 334 & 26 & 26 & 459  \\
+ \hline
+ 2 & 2 &  349 & 27 & 27 & 461 \\
+ \hline
+ 3 & 3 & 360 &28 & 28 & 463 \\
+ \hline
+ 4 & 4 & 369 & 29 & 29 & 465 \\
+ \hline
+ 5 & 5 & 377 &  30 & 30 & 467 \\
+ \hline
+ 6 & 6 & 384 & 31 & 31 & 469 \\
+ \hline
+ 7 & 7 & 390&  32 & 32 &  470 \\
+ \hline
+ 8 & 8 & 396 & 33 & 33 & 472 \\
+ \hline
+ 9 & 9 & 401  &34 & 34 & 474 \\
+ \hline
+ 10 & 10 & 406&  35 & 35 & 476 \\
+ \hline
+ 11 & 11 & 411&36 & 36 & 477\\
+ \hline
+ 12 & 12 &  415  &  37 & 37 & 479 \\
+ \hline
+ 13 & 13 & 423 & 38 & 38 & 480 \\
+ \hline
+ 14 & 14 & 430 &  39 & 39 & 482  \\
+ \hline
+ 15 & 15 & 433&   40 & 40 & 483\\
+ \hline
+ 16 & 16 & 436 & 41 & 41 & 485  \\
+ \hline
+ 17 & 17 & 439& 42  &42 &  486   \\
+ \hline
+ 18 & 18 & 442& 43 & 43 & 487   \\
+ \hline
+ 19 & 19 & 444 &  44 & 44 & 489  \\
+ \hline
+ 20 & 20 & 447&   45 & 45 & 490 \\
+ \hline
+ 21 & 21 & 450&  46 & 46 & 491 \\
+ \hline
+ 22 & 22 &  452 &  47 & 47 & 492\\
+ \hline
+ 23 & 23 & 454 &48 & 48 & 494 \\
+ \hline
+ 24 & 24 & 454 &  49 & 49 & 495 \\
+ \hline
+ 25 & 25 & 457 &   50 & 50 & 496 \\
+ \hline
+\end{tabular}
+\caption{\label{tab3}Dependența puterii electice produse ca funcție de $P_{aux}$(puterea adaugata) pentru densitatea de $0.6 *10^{20} m^{-3}$ .}
+\end{center}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|} 
+ \hline
+ Nr. crt &  $P_{aux}[MW]$ & P[MW] &  Nr. crt &  $P_{aux}[MW]$ & P[MW]  \\ 
+ \hline\hline
+ 1 & 1 & 1660 & 26 & 26 & 1705  \\
+ \hline
+ 2 & 2 &  1662 & 27 & 27 & 1706 \\
+ \hline
+ 3 & 3 & 1664 &28 & 28 & 1708 \\
+ \hline
+ 4 & 4 & 1666 & 29 & 29 & 1709 \\
+ \hline
+ 5 & 5 & 1668 &  30 & 30 & 1711 \\
+ \hline
+ 6 & 6 & 1670 & 31 & 31 & 1712 \\
+ \hline
+ 7 & 7 & 1671&  32 & 32 &  1714 \\
+ \hline
+ 8 & 8 & 1673 & 33 & 33 & 1715 \\
+ \hline
+ 9 & 9 & 1675  &34 & 34 & 1716 \\
+ \hline
+ 10 & 10 & 1677&  35 & 35 & 1718 \\
+ \hline
+ 11 & 11 & 1679&36 & 36 & 1719\\
+ \hline
+ 12 & 12 &  1682  &  37 & 37 & 1721 \\
+ \hline
+ 13 & 13 & 1684 & 38 & 38 & 1722 \\
+ \hline
+ 14 & 14 & 1685 &  39 & 39 & 1723  \\
+ \hline
+ 15 & 15 & 1687&   40 & 40 & 1725\\
+ \hline
+ 16 & 16 & 1689 & 41 & 41 & 1726  \\
+ \hline
+ 17 & 17 & 1691& 42  &42 &  1727   \\
+ \hline
+ 18 & 18 & 1692& 43 & 43 & 1729   \\
+ \hline
+ 19 & 19 & 1694 &  44 & 44 & 1730  \\
+ \hline
+ 20 & 20 & 1695&   45 & 45 & 1731 \\
+ \hline
+ 21 & 21 & 1697&  46 & 46 & 1733 \\
+ \hline
+ 22 & 22 &  1699 &  47 & 47 & 1734\\
+ \hline
+ 23 & 23 & 1700 &48 & 48 & 1735 \\
+ \hline
+ 24 & 24 & 1702 &  49 & 49 & 1736 \\
+ \hline
+ 25 & 25 & 1703 &   50 & 50 & 1738 \\
+ \hline
+\end{tabular}
+\caption{\label{tab4}Dependența puterii electice produse ca funcție de $P_{aux}$(puterea adaugata) pentru densitatea de $1.09 *10^{20} m^{-3}$ .}
+\end{center}
+\end{table}
+
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|} 
+ \hline
+ Nr. crt &  $P_{aux}[MW]$ & P[MW] &  Nr. crt &  $P_{aux}[MW]$ & P[MW]  \\ 
+ \hline\hline
+ 1 & 1 & 2014 & 22 & 22 & 2052  \\
+ \hline
+ 2 & 2 &  2016 & 23 & 23 & 2054 \\
+ \hline
+ 3 & 3 & 2018 &24 & 24 & 2055 \\
+ \hline
+ 4 & 4 & 2020 & 25 & 25 & 2056 \\
+ \hline
+ 5 & 5 & 2023 &  26 & 26 & 1711 \\
+ \hline
+ 6 & 6 & 2025 & 27 & 27 & 2058 \\
+ \hline
+ 7 & 7 & 2026&  28 & 28 &  2059 \\
+ \hline
+ 8 & 8 & 2027 & 29 & 29 & 2061 \\
+ \hline
+ 9 & 9 & 2030  &30 & 30 & 2062 \\
+ \hline
+ 10 & 10 & 2032&  31 & 31 & 2064 \\
+ \hline
+ 11 & 11 & 2033&32 & 32 & 2065\\
+ \hline
+ 12 & 12 &  2035  &  33 & 33 & 2066 \\
+ \hline
+ 13 & 13 & 2037 & 34 & 34 & 2068 \\
+ \hline
+ 14 & 14 & 2038 &  35 & 35 & 2069  \\
+ \hline
+ 15 & 15 & 2040&   36 & 36 & 2071\\
+ \hline
+ 16 & 16 & 2042 & 37 &37 & 2072  \\
+ \hline
+ 17 & 17 & 2044& 38  &38 &  2073   \\
+ \hline
+ 18 & 18 & 2046& 38 & 38 & 2075   \\
+ \hline
+ 19 & 19 & 2048 &  39 & 39 & 2076  \\
+ \hline
+ 20 & 20 & 2049&   40 & 40 & 2077 \\
+ \hline
+ 21 & 21 & 2051&  41 & 41 & 2078 \\
+ \hline
+\end{tabular}
+\caption{\label{tab5}Dependența puterii electice produse ca funcție de $P_{aux}$(puterea adaugata) pentru densitatea de $1.19 *10^{20} m^{-3}$ .}
+\end{center}
+\end{table}
+
+\begin{figure}[H]
+\centering
+  \includegraphics[width=0.9\textwidth]{paux.png}
+  \caption{\label{paux}Dependența puterii electrice produse ca funcție de $P_{aux}$(puterea adaugată) pentru diferite valori ale densității.}
+\end{figure}
+
+După analiza tabelelor și figuriilor ajungem la concluzia că densitatea plasmei este parametrul cel mai important pentru atingerea puterii electrice produsă maximă și acesta ar trebuii prioritizat mai mult decât puterea adaugată. După puține încercări, ajungem astfel la parametrii optimi pentru reactor de $n_e= 1.19 *10^{20} m^{-3}$, $P_{aux}=42.5 MW$, iar intensitatea câmpului magnetic de confinare va fii tot cea de $9.68 T$. Puterea electrică produsă de reactorul funcționând la acești parametrii este de 2079 MW, suficient pentru a aprinde în totalitate luminiile orașului \ref{max}.
+
+\begin{figure}[H]
+\centering
+  \includegraphics[width=0.9\textwidth]{max}
+  \caption{\label{max}Parametrii de control ai reactorului pentru care toate luminiile orașului sunt aprinse.}
+\end{figure}
+}
+
+
+
+
+
+
+
+{\section{Concluzii}
+În această lucrarea am ințeles modul de funcționare a unui reactor de fuziune nucleară de tip tokamak prin analiza parametriilor constructivi și de control ai acestuia. Am determinat dependența energiei produse de densitatea plasmei și puterea auxiliară introdusă din exterior. Am determinat parametrii optimi astfel încât sa obținem energia maximă posibilă pentru un model de reactor predefinit (ITER).
+}
+
+\printbibliography
+
+\end{document}
